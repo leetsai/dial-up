@@ -1,0 +1,23 @@
+'{
+  "gifts": [
+    "Flowers",
+    "Make Dinner",
+    "Massage"
+  ],
+  "activities": [
+    "Picnic",
+    "Museum",
+    "Mini Golf",
+    "Local Music"
+  ],
+  "trips": [
+    "Camping Trip",
+    "Wine Tasting",
+    "Scenic Drive"
+  ],
+  "food": [
+    "brunch",
+    "dinner",
+    "drinks"
+  ]
+}'

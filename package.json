@@ -16,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/dial-up/dial-up/issues"
   },
-  "homepage": "https://github.com/dial-up/dial-up#readme"
+  "homepage": "https://github.com/dial-up/dial-up#readme",
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-ui-router": "^0.3.1",
+    "express": "^4.14.0",
+    "jquery": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2"
+  }
 }
