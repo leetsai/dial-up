@@ -1,0 +1,26 @@
+* {
+  border: 1px solid rgba(0, 0, 0, 0.3);;
+}
+html {
+  margin: 0;
+  height: 100%;
+}
+body {
+  top: 30%;
+  transform: translateY(30%);
+}
+.getIdea {
+  width: 300px;
+  height: 300px;
+  border-radius: 500px;
+  background-color: lime;
+}
+.centerMessage {
+  font-size: 60px;
+  padding: 40px;
+}
+.wrapper {
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+}
