@@ -49,12 +49,6 @@ html, body {
   align-items: center;
 }
 /* Select options */
-.unselectable {
-
-}
-.selectable {
-
-}
 /*@keyframes spinIn {
   0% {
     transform: translateY(200%);
