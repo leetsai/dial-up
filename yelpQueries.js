@@ -2,7 +2,8 @@ var Yelp = require('yelp');
 
 var yelp = new Yelp({
   // Your OAuth consumer key (from Yelp's Manage API Access)
-  // The access token obtained (from Yelp's Manage API Access)
+  consumer_key: process.env.consumer_key,
+  token: process.env.token
 })
 
 var yelpSearch = yelp.search({term:'dinner', location: 'San Francisco'})
