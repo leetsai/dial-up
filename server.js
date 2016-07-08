@@ -50,11 +50,6 @@ app.post('/api/getIdea', function(req, res, next) {
 
 
 
-app.listen(3000, function() {
-  console.log('App listening on port 3000!');
-
-// do other stuff
 app.use(express.static(__dirname + '/public'))
 app.listen(port, function() {
   console.log('App listening on port')});
-});
