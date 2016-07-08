@@ -11,6 +11,11 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
+var app = express();
+var port = process.env.PORT || 1337;
+var yelpSearch = require('./yelpQueries.js');
+// var request = require('request');
+
 app.use(function(req,res,next) {
   console.log('/' + req.method + ' from ' + req.url);
   next();
@@ -20,6 +25,7 @@ app.use(function(req,res,next) {
 
 // INDEX.HTML - Served when user hits server
 app.get('/', function(req, res) {
+  yelpSearch.yelpSearch;
   res.sendFile(path + 'index.html');
 });
 
@@ -46,4 +52,9 @@ app.post('/api/getIdea', function(req, res, next) {
 
 app.listen(3000, function() {
   console.log('App listening on port 3000!');
+
+// do other stuff
+app.use(express.static(__dirname + '/public'))
+app.listen(port, function() {
+  console.log('App listening on port')});
 });
