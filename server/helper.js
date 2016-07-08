@@ -2,23 +2,6 @@ var express = require('express');
 var server = require('../server.js')
 var fs = require('fs');
 
-var app = server.app;
-
-// First pass at internal API
-// app.get('/', function(req, res) {
-//   res.sendFile('/index.html')
-// })
-
-app.get('api/getIdea', function(req, res, next) {
-  var category = req.body.category;
-  req.send('Hello Front End');
-
-});
-
-
-// Helper Functions
-
-
 var getIdeaList = function() {
 
   fs.readFile(__dirname + '/data.json', 'UTF-8', function(err, data) {
@@ -26,7 +9,7 @@ var getIdeaList = function() {
       console.log('Get Idea Threw Error: ', err);
     }
     var ideaList = JSON.parse(data);
-    return JSON.parse(data);
+    return ideaList;
   })
 };
 
@@ -36,7 +19,7 @@ var generateRandomIdea = function (object, category) {
   return object[category][random];
 };
 
-
-
-
-
+module.exports = {
+  getIdeaList: getIdeaList,
+  generateRandomIdea: generateRandomIdea
+}
