@@ -20,6 +20,7 @@ angular.module('App',
   .state('list', {
     url: '/:id',
     templateUrl: 'views/list.html',
+    controller: 'ListController'
   })
 
 });
