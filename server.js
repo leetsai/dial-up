@@ -2,12 +2,14 @@ var express = require('express');
 var fs = require('fs');
 var app = express();
 var path = __dirname + '/public/';
-var bodyparser = require('body-parser')
+var bodyParser = require('body-parser')
 
 var helpers = require('./server/helper.js');
 
 // SET UP
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
 app.use(function(req,res,next) {
   console.log('/' + req.method + ' from ' + req.url);
@@ -27,14 +29,17 @@ app.get('/', function(req, res) {
 
 
 // getIdea - responds to user clicking "GO button" from UI
-app.post('api/getIdea', function(req, res, next) {
-  req.ideaList = helpers.getIdeaList();
-  next();
+app.post('/api/getIdea', function(req, res, next) {
+  helpers.getIdeaList(function(data) {
+    helpers.generateRandomIdea(data, req.body.category, function(result) {
+      res.send(result);
+    })
+  })
 });
 
-app.post('api/getIdea', function(req, res, next) {
-  res.send(helpers.generateRandomIdea(req.ideaList, req.body.category));
-});
+// app.post('/api/getIdea', function(req, res, next) {
+//   res.send(helpers.generateRandomIdea(req.ideaList, req.body.category));
+// });
 
 
 
