@@ -6,14 +6,8 @@ html, body {
   height: 100%;
 }
 .container {
-  top: 30%;
-  transform: translateY(30%);
-}
-.getIdea {
-  width: 300px;
-  height: 300px;
-  border-radius: 500px;
-  background-color: lime;
+  margin: 0 auto;
+  width: 90%;
 }
 .centerMessage {
   font-size: 60px;
@@ -24,8 +18,65 @@ html, body {
   margin: 0 auto;
   text-align: center;
 }
+.listWrapper {
+  margin-left: 275px;
+  text-align: center;
+}
+
 .navbar {
   height: 40px;
   line-height: 40px;
   margin: 0;
+}
+.sidebar {
+  float: left;
+  text-align: center;
+}
+.btnList {
+  width: 275px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Button List */
+.getIdeaBtn {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  background-color: #70db70;
+  font-size: 50px;
+  margin: 0 40px;
+  border: 2px solid #424242;
+  box-shadow: inset -2px 2px 40px 20px rgba(119,138,116,1);
+}
+.ideaBtnNext {
+  background-color: red !important;
+}
+.backBtn {
+  width: 100px;
+  height: 100px;
+  background-color: #70db70;
+  margin: 10px 0 10px 0;
+  border-radius: 6px;
+}
+.dislike {
+  background-color: red;
+}
+.like {
+  background-color: green;
+}
+.button {
+  text-align: center;
+}
+.mainscreen {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+}
+.sidescreen {
+  height: 80px;
+  width: 80px;
+  margin-bottom: 10px;
+  border-radius: 6px;
 }

@@ -1,9 +1,16 @@
-<div class="wrapper" list>
+<div class="sidebar" idea-list>
+  <div class="btnList">
+    <button idea-button class="backBtn" ng-click="goBack()">Back</button>
+    <button idea-button class="like sidescreen button" ng-click="likeIdea()">Like</button>
+    <button idea-button class="dislike sidescreen button" ng-click="dislikeIdea()">Dislike</button>
+  </div>
+</div>
+<div class="listWrapper">
   <h2>Idea</h2>
   <div>
     <ul>
       <li ng-repeat="event in data.events">Event</li>
     </ul>
-    <img ng-src="#" ng-if=''>
+    <!-- <img ng-src="#" ng-if=''> -->
   </div>
 </div>

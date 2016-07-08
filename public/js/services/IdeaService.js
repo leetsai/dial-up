@@ -8,7 +8,7 @@ angular.module('App.ideaService', [])
       url: '/'
     })
     .then(function(resp) {
-      return {idea: 'Placeholder'};
+      return {idea:'Placeholder'};
     })
   }
   return {
