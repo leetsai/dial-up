@@ -5,9 +5,17 @@ angular.module('App.ideaBtn', [])
     link: function($scope, e, attr) {
       $scope.getIdea = function() {
         Ideas.getIdea($scope.filter)
-        .then(function(data) {
-          $scope.idea = data.idea;
-          $scope.moreInfo = true;
+        .then(function(idea) {
+          $scope.idea = idea.data;
+          if (typeof idea.data == 'object') {
+            document.querySelector('.centerMessage').classList.add('selectable');
+            document.querySelector('.centerMessage').classList.remove('unselectable');
+            $scope.moreInfo = true;
+          }
+          else {
+            document.querySelector('.centerMessage').classList.add('unselectable');
+            document.querySelector('.centerMessage').classList.remove('selectable');
+          }
           $scope.sideBtns = true;
           $scope.button = "Next"
         });
@@ -20,6 +28,10 @@ angular.module('App.ideaBtn', [])
       $scope.goBack = function() {
         $state.go('home');
       }
+      var menu = document.getElementById('filterMenu');
+      menu.addEventListener('change', function(e) {
+        $scope.filter = e.target.value;
+      })
     }
   }
 
