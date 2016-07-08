@@ -1,11 +1,11 @@
 * {
   border: 1px solid rgba(0, 0, 0, 0.3);;
 }
-html {
+html, body {
   margin: 0;
   height: 100%;
 }
-body {
+.container {
   top: 30%;
   transform: translateY(30%);
 }
@@ -23,4 +23,9 @@ body {
   overflow: hidden;
   margin: 0 auto;
   text-align: center;
+}
+.navbar {
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
 }
