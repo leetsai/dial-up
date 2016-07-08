@@ -16,30 +16,27 @@ app.get('api/getIdea', function(req, res, next) {
 });
 
 
-// Helper Function
+// Helper Functions
 
 
 var getIdeaList = function() {
+
   fs.readFile(__dirname + '/data.json', 'UTF-8', function(err, data) {
     if (err) {
       console.log('Get Idea Threw Error: ', err);
     }
     var ideaList = JSON.parse(data);
-    console.log(ideaList);
-
-    console.log(generateRandomOutput(ideaList, 'trips'));
-
     return JSON.parse(data);
   })
 };
 
-var generateRandomOutput = function (object, category) {
+var generateRandomIdea = function (object, category) {
   var len = object[category].length;
   var random = Math.floor(Math.random() * len);
   return object[category][random];
 };
 
-// getIdeaList();
+
 
 
 
