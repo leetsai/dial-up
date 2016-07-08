@@ -1,12 +1,12 @@
 var Yelp = require('yelp');
+var env = require('dotenv').config();
 
 var yelp = new Yelp({
-  // Your OAuth consumer key (from Yelp's Manage API Access)
-  consumer_key: process.env.consumer_key,
-  consumer_secret: process.env.consumer_secret,
-  token: process.env.token,
-  token_secret: process.env.token_secret
-})
+  consumer_key: process.env['CONSUMER_KEY'],
+  consumer_secret: process.env['CONSUMER_SECRET'],
+  token: process.env['TOKEN'],
+  token_secret: process.env['TOKEN_SECRET']
+});
 
 var yelpSearch = yelp.search({term:'dinner', location: 'San Francisco'})
   .then(function(data) {
@@ -25,5 +25,6 @@ var yelpSearch = yelp.search({term:'dinner', location: 'San Francisco'})
 //   .catch(console.error);
 
 module.exports = {
-  yelpSearch: yelpSearch
+  yelpSearch: yelpSearch,
+  yelpKeys: yelp
 }
