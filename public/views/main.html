@@ -1,6 +1,6 @@
 <div class="wrapper">
   <div idea-list class="centerMessage" ng-click="getList()">
-    <span>{{ idea }}</span>
+    <span class="centerMessageText" model="{{ idea }}" animate-idea>{{ idea }}</span>
   </div>
   <button idea-button class="dislike mainscreen button" ng-click="dislikeIdea()" ng-if="sideBtns">Dislike</button>
   <button idea-button class="getIdeaBtn" ng-click="getIdea()">{{ button }}</button>

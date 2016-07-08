@@ -10,13 +10,18 @@ html, body {
   width: 90%;
 }
 .centerMessage {
-  font-size: 60px;
   padding: 40px;
   width: 60%;
   margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 40px;
+  overflow: hidden;
 }
+.centerMessageText {
+  font-size: 60px;
+  display: block;
+}
+
 .wrapper {
   overflow: hidden;
   margin: 0 auto;
@@ -50,6 +55,31 @@ html, body {
 .selectable {
 
 }
+/*@keyframes spinIn {
+  0% {
+    transform: translateY(200%);
+  }
+  60% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes spinOut {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(-200%);
+  }
+}
+.test {
+  animation: spinOut 0.3s ease-in;
+}*/
 /* Button List */
 .getIdeaBtn {
   width: 300px;
