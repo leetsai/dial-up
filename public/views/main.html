@@ -1,5 +1,7 @@
 <div class="wrapper">
-  <div idea-list class="centerMessage" ng-click="getList()">{{ idea }}</div>
+  <div idea-list class="centerMessage" ng-click="getList()">
+    <span>{{ idea }}</span>
+  </div>
   <button idea-button class="dislike mainscreen button" ng-click="dislikeIdea()" ng-if="sideBtns">Dislike</button>
   <button idea-button class="getIdeaBtn" ng-click="getIdea()">{{ button }}</button>
   <button idea-button class="like mainscreen button" ng-click="likeIdea()" ng-if="sideBtns">Like</button>
