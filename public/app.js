@@ -1,8 +1,10 @@
 angular.module('App',
 [
+  'App.navbar',
   'App.ideaCtrl',
   'App.ideaService',
-  'App.ideaDir',
+  'App.ideaList',
+  'App.ideaBtn',
   'ui.router'
 ])
 

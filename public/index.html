@@ -1,27 +1,31 @@
 <!doctype html>
 <html>
-  <head>
-    <title>Spontaneo</title>
-    <!-- css -->
-    <link rel='stylesheet' href='css/styles.css'>
-  </head>
-  <body ng-app='App'>
-    <!-- navbar here  -->
-    <!-- filter in navbar -->
+<head>
+  <title>Spontaneo</title>
+  <!-- css -->
+  <link rel='stylesheet' href='css/styles.css'>
+</head>
+<body ng-app='App'>
+  <navigation></navigation>
+  <!-- filter in navbar -->
+  <div class="container">
     <div ui-view></div>
+  </div>
 
-    <!-- lib -->
-    <script src="lib/angular.min.js"></script>
-    <script src="lib/angular-ui-router.min.js"></script>
-    <script src="lib/jquery.min.js"></script>
+  <!-- lib -->
+  <script src="lib/angular.min.js"></script>
+  <script src="lib/angular-ui-router.min.js"></script>
+  <script src="lib/jquery.min.js"></script>
 
-    <!-- controllers -->
-    <script src="js/controllers/IdeaController.js"></script>
-    <!-- services -->
-    <script src="js/services/IdeaService.js"></script>
-    <!-- directives -->
-    <script src="js/directives/IdeaDirective.js"></script>
-    <!-- main -->
-    <script src="app.js"></script>
-  </body>
+  <!-- controllers -->
+  <script src="js/controllers/IdeaController.js"></script>
+  <!-- services -->
+  <script src="js/services/IdeaService.js"></script>
+  <!-- directives -->
+  <script src="js/directives/NavbarDirective.js"></script>
+  <script src="js/directives/IdeaBtnDirective.js"></script>
+  <script src="js/directives/IdeaListDirective.js"></script>
+  <!-- main -->
+  <script src="app.js"></script>
+</body>
 </html>

@@ -1,16 +1,17 @@
 angular.module('App.ideaService', [])
 
-.factory('Ideas', function($http) {
+.factory('Ideas', ['$http', function($http) {
 
-  var getIdea = $http({
-    method: 'GET',
-    url: '/'
-  })
-  .then(function(resp) {
-    console.log(resp)
-  })
-
+  var getIdea = function() {
+    return $http({
+      method: 'GET',
+      url: '/'
+    })
+    .then(function(resp) {
+      return {idea: 'Placeholder'};
+    })
+  }
   return {
     getIdea: getIdea
   }
-})
+}])
