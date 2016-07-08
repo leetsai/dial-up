@@ -14,9 +14,17 @@ var getIdeaList = function(callback) {
 
 var generateRandomIdea = function (object, category, callback) {
   console.log(object, category)
-  var len = object[category].length;
-  var random = Math.floor(Math.random() * len);
-  callback(object[category][random]);
+  if (category === 'all') {
+    var categories = Object.keys(object);
+    var randomCategory = categories[Math.floor(Math.random() * Object.keys(object).length)];
+    var randomEvent = Math.floor(Math.random() * object[randomCategory].length);
+    callback(object[randomCategory][randomEvent]);
+  }
+  else {
+    var len = object[category].length;
+    var random = Math.floor(Math.random() * len);
+    callback(object[category][random]);
+  }
 };
 
 module.exports = {

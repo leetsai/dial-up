@@ -12,6 +12,10 @@ html, body {
 .centerMessage {
   font-size: 60px;
   padding: 40px;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .wrapper {
   overflow: hidden;
