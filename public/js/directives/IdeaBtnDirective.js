@@ -4,7 +4,7 @@ angular.module('App.ideaBtn', [])
   return {
     link: function($scope, e, attr) {
       $scope.getIdea = function() {
-        Ideas.getIdea()
+        Ideas.getIdea($scope.filter)
         .then(function(data) {
           $scope.idea = data.idea;
           $scope.moreInfo = true;

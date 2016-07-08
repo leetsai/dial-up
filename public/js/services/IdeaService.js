@@ -2,10 +2,11 @@ angular.module('App.ideaService', [])
 
 .factory('Ideas', ['$http', function($http) {
 
-  var getIdea = function() {
+  var getIdea = function(filter) {
     return $http({
-      method: 'GET',
-      url: '/'
+      method: 'POST',
+      url:'/api/getIdea',
+      data: {category:filter}
     })
     .then(function(resp) {
       return {idea:'Placeholder'};
