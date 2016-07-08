@@ -5,8 +5,8 @@ angular.module('App.ideaBtn', [])
     link: function($scope, e, attr) {
       $scope.getIdea = function() {
         Ideas.getIdea($scope.filter)
-        .then(function(resp) {
-          $scope.idea = resp.data.idea;
+        .then(function(idea) {
+          $scope.idea = idea.data;
           $scope.moreInfo = true;
           $scope.sideBtns = true;
           $scope.button = "Next"
