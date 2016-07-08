@@ -109,7 +109,6 @@ app.post('/api/wikiDetails', function(req, res, next) {
 
 
 
-<<<<<<< d556f58a86c04a62769dadedfbffe3a0850f2436
 app.listen(3000, function() {
   console.log('App listening on port 3000!');
 
@@ -118,8 +117,3 @@ app.listen(3000, function() {
   app.listen(port, function() {
     console.log('App listening on port 1337')});
 });
-=======
-app.use(express.static(__dirname + '/public'))
-app.listen(port, function() {
-  console.log('App listening on port')});
->>>>>>> Deleted port 3000
