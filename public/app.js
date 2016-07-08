@@ -3,8 +3,9 @@ angular.module('App',
   'App.navbar',
   'App.ideaCtrl',
   'App.ideaService',
-  'App.ideaList',
   'App.ideaBtn',
+  'App.listCtrl',
+  'ngAnimate',
   'ui.router'
 ])
 
@@ -17,9 +18,8 @@ angular.module('App',
     controller: 'IdeaController'
   })
   .state('list', {
-    url: '/:idea',
+    url: '/:id',
     templateUrl: 'views/list.html',
-    controller: 'ListController'
   })
 
 });

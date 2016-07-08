@@ -8,7 +8,17 @@ angular.module('App.ideaBtn', [])
         .then(function(data) {
           $scope.idea = data.idea;
           $scope.moreInfo = true;
+          $scope.sideBtns = true;
+          $scope.button = "Next"
         });
+      }
+      $scope.getList = function() {
+        if ($scope.moreInfo) {
+          $state.go('list', {id:$scope.idea});
+        }
+      }
+      $scope.goBack = function() {
+        $state.go('home');
       }
     }
   }
