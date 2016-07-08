@@ -5,17 +5,9 @@ angular.module('App.ideaBtn', [])
     link: function($scope, e, attr) {
       $scope.getIdea = function() {
         Ideas.getIdea($scope.filter)
-        .then(function(idea) {
-          $scope.idea = idea.data;
-          if (typeof idea.data == 'object') {
-            document.querySelector('.centerMessage').classList.add('selectable');
-            document.querySelector('.centerMessage').classList.remove('unselectable');
-            $scope.moreInfo = true;
-          }
-          else {
-            document.querySelector('.centerMessage').classList.add('unselectable');
-            document.querySelector('.centerMessage').classList.remove('selectable');
-          }
+        .then(function(resp) {
+          $scope.idea = resp.data.idea;
+          $scope.moreInfo = true;
           $scope.sideBtns = true;
           $scope.button = "Next"
         });

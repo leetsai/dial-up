@@ -9,11 +9,20 @@ angular.module('App.ideaService', [])
   var getIdea = function(filter) {
     return $http({
       method: 'POST',
-      url:'api/getIdea',
+      url:'/api/getIdea',
       data: {category:filter}
     })
     .then(function(resp) {
       currentIdea = resp;
+      return resp;
+    })
+  }
+  var getList = function() {
+    return $http({
+      method: 'GET',
+      url: '/api/suggestionDetails'
+    })
+    .then(function(resp) {
       return resp;
     })
   }
