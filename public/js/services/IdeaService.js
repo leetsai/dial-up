@@ -2,10 +2,10 @@ angular.module('App.ideaService', [])
 
 .factory('Ideas', ['$http', function($http) {
 
-  var currentIdea = null;
-  var getCurrentIdea = function() {
-    return currentIdea;
-  }
+  var currentIdea = {
+    data: null
+  };
+
   var getIdea = function(filter) {
     return $http({
       method: 'POST',
@@ -13,7 +13,7 @@ angular.module('App.ideaService', [])
       data: {category:filter}
     })
     .then(function(resp) {
-      currentIdea = resp;
+      currentIdea.data = resp.data;
       return resp;
     })
   }
@@ -27,7 +27,8 @@ angular.module('App.ideaService', [])
     })
   }
   return {
-    currentIdea: getCurrentIdea,
-    getIdea: getIdea
+    currentIdea: currentIdea,
+    getIdea: getIdea,
+    getList: getList
   }
 }])

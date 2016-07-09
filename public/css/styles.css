@@ -1,24 +1,28 @@
-* {
-  border: 1px solid rgba(0, 0, 0, 0.3);;
+*:focus {
+    outline: none;
 }
 html, body {
   margin: 0;
   height: 100%;
+  background-color: #DBC8AA;
+  font-family: "Optima",Helvetica,Arial,sans-serif;
 }
 .container {
   margin: 0 auto;
   width: 90%;
 }
 .centerMessage {
-  padding: 40px;
-  width: 60%;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #868686;
+  width: 75%;
   margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 40px;
   overflow: hidden;
 }
 .centerMessageText {
-  font-size: 60px;
+  font-size: 50px;
   display: block;
 }
 
@@ -28,15 +32,57 @@ html, body {
   text-align: center;
 }
 .listWrapper {
-  margin-left: 275px;
   text-align: center;
+  margin: 0 auto;
+  width: 75%;
+  margin-bottom: 40px;
+  border: 1px solid #868686;
+  background-color: white;
 }
-
+.list-item {
+  margin: 10px;
+  padding: 10px;
+  overflow: hidden;
+  border-bottom: 1px solid #868686
+}
 .navbar {
   height: 40px;
   line-height: 40px;
   margin: 0;
+  border-bottom: 1px solid #868686;
+  background-color: rgba(107, 124, 142, .9);
 }
+.footer {
+  z-index: 10000;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 13px;
+  background: rgba(107, 124, 142, .9);
+  padding: 6px 20px 6px 6px;
+  border-top: 1px solid #868686;
+  color: white;
+  text-align: right;
+}
+.footer span {
+  margin-right: 25px;
+}
+/* List values */
+.name {
+  float: left;
+}
+.description {
+  float: left;
+}
+.cost {
+  float: right;
+}
+.event {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/*====================*/
 .sidebar {
   float: left;
   text-align: center;
@@ -47,6 +93,9 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+#filterMenu {
+  border: 1px solid #868686;
 }
 /* Select options */
 /*@keyframes spinIn {
@@ -76,14 +125,33 @@ html, body {
 }*/
 /* Button List */
 .getIdeaBtn {
-  width: 300px;
-  height: 300px;
-  border-radius: 100%;
-  background-color: #70db70;
-  font-size: 50px;
+  width: 250px;
+  height: 150px;
+  background: linear-gradient(30deg, #f7a72f 50%, #F9C231 50% );
+  font-size: 40px;
   margin: 0 40px;
-  border: 2px solid #424242;
-  box-shadow: inset -2px 2px 40px 20px rgba(119,138,116,1);
+  border: 1px solid #868686;
+  font-family: "Optima",Helvetica,Arial,sans-serif;
+}
+.getIdeaBtn:active {
+  font-size: 37px;
+  background: linear-gradient(30deg, #da9329 50%, #e4b22e 50% );
+  box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.75);
+}
+.btnInner:active {
+  width: 65%;
+  height: 55%;
+  background-color: #ecbb3a;
+}
+.btnInner {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color: #ffca3f;
+  height: 60%;
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
 }
 .ideaBtnNext {
   background-color: red !important;
@@ -91,9 +159,9 @@ html, body {
 .backBtn {
   width: 100px;
   height: 100px;
-  background-color: #70db70;
+  background: linear-gradient(45deg, #70db70 50%, #70db70 50%, #83e883 50% );
   margin: 10px 0 10px 0;
-  border-radius: 6px;
+  border: 1px solid #868686;
 }
 .dislike {
   background-color: red;
