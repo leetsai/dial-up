@@ -9,12 +9,15 @@ angular.module('App.ideaBtn', [])
           $scope.idea = idea.data;
           $scope.moreInfo = true;
           $scope.sideBtns = true;
+          $scope.eventList = false;
           $scope.button = "Next"
         });
       }
       $scope.getList = function() {
         if ($scope.moreInfo) {
-          $state.go('list', {id:$scope.idea});
+          $scope.eventList = true;
+          // $state.go('list', {id:$scope.idea});
+          console.log('Needs to populate list');
         }
       }
       $scope.goBack = function() {
