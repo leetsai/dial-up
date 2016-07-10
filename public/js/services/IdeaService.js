@@ -1,7 +1,7 @@
 angular.module('App.ideaService', [])
 
 .factory('Ideas', ['$http', function($http) {
-
+  // Storage for idea - need more for API data
   var currentIdea = {
     data: null
   };
