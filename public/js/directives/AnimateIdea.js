@@ -1,5 +1,6 @@
 angular.module('App.animateIdea', [])
 
+// Not working, elements were only animating on the first click
 .directive('animateIdea', function() {
   function animateModelChangeLink(scope, element, attrs){
 

@@ -20,10 +20,21 @@ html, body {
   margin-top: 40px;
   margin-bottom: 40px;
   overflow: hidden;
+  line-height: 60px;
+  font-size: 50px;
 }
 .centerMessageText {
-  font-size: 50px;
   display: block;
+}
+.getInfo:hover {
+  background-color: #fffaea;
+  cursor: pointer
+}
+.getInfo:active {
+  font-size: 49px;
+  box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.5);
+}
+.noInfo {
 }
 
 .wrapper {
@@ -31,20 +42,7 @@ html, body {
   margin: 0 auto;
   text-align: center;
 }
-.listWrapper {
-  text-align: center;
-  margin: 0 auto;
-  width: 75%;
-  margin-bottom: 40px;
-  border: 1px solid #868686;
-  background-color: white;
-}
-.list-item {
-  margin: 10px;
-  padding: 10px;
-  overflow: hidden;
-  border-bottom: 1px solid #868686
-}
+
 .navbar {
   height: 40px;
   line-height: 40px;
@@ -67,7 +65,21 @@ html, body {
 .footer span {
   margin-right: 25px;
 }
+.listWrapper {
+  text-align: center;
+  margin: 0 auto;
+  width: 75%;
+  margin-bottom: 40px;
+  border: 1px solid #868686;
+  background-color: white;
+}
 /* List values */
+.list-item {
+  margin: 10px;
+  padding: 10px;
+  overflow: hidden;
+  border-bottom: 1px solid #868686
+}
 .name {
   float: left;
 }
@@ -132,6 +144,9 @@ html, body {
   margin: 0 40px;
   border: 1px solid #868686;
   font-family: "Optima",Helvetica,Arial,sans-serif;
+}
+.getIdeaBtn:hover {
+  cursor: pointer;
 }
 .getIdeaBtn:active {
   font-size: 37px;
