@@ -8,13 +8,16 @@ var yelp = new Yelp({
   token_secret: process.env['TOKEN_SECRET']
 });
 
-var yelpSearch = yelp.search({term:'dinner', location: 'San Francisco'})
-  .then(function(data) {
-    console.log(data);
-  })
-  .catch(function(err) {
-    console.error(err);
-  });
+var yelpSearch = function(search, location, cb) {
+  yelp.search({term:search, location: location})
+    .then(function(data) {
+      cb(data);
+      console.log(data);
+    })
+    .catch(function(err) {
+      console.error(err);
+    });
+  };
 
 // yelp.business('yelp-san-francisco')
 //   .then(console.log)
