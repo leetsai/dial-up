@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 // app.use(bodyParser.json());
 
 var port = process.env.PORT || 1337;
-var yelpSearch = require('./yelpQueries.js');
+var yelpSearch = require('./server/externalAPIs/yelp.js');
 // var request = require('request');
 
 app.use(function(req,res,next) {
@@ -92,5 +92,5 @@ app.listen(3000, function() {
   // do other stuff
   app.use(express.static(__dirname + '/public'))
   app.listen(port, function() {
-    console.log('App listening on port')});
-  });
+    console.log('App listening on port 1337')});
+});

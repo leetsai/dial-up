@@ -10,5 +10,4 @@ angular.module('App.listCtrl', [])
     description: 'Biking, on a mountain'
   }]
   console.log($scope.data)
-
 }])
