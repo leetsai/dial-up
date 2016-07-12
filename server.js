@@ -54,25 +54,40 @@ app.post('/api/getIdea', function(req, res, next) {
 });
 
 
-app.get('/api/suggestionDetails', function(req, res, next) {
-  async.parallel({
+app.post('/api/suggestionDetails', function(req, res, next) {
 
-    yelp: function(callback) {
-      callback(null, yelp.yelpSearch(req.body.suggestion, req.body.location, function(data) {
-        console.log('Yelp Call Executing: ', data);
-        res.send(data);
-      }));
-    },
+  // async.parallel({
 
-    wiki: function(callback) {
-      callback(null, wiki.wikiSearch(req.body.suggestion, function(data) {
+  //   yelp: function(callback) {
+  //     callback(null, yelp.yelpSearch(req.body.suggestion, req.body.location, function(data) {
+  //       console.log('Yelp Call Executing: ', data);
+  //       res.send(data);
+  //     }));
+  //   },
+
+  //   wiki: function(callback) {
+  //     callback(null, wiki.wikiSearch(req.body.suggestion, function(data) {
+  //       console.log('Wiki Call Executing: ', data);
+  //       res.send(data);
+  //     }));
+  //   }
+  // }, function(err, results) {
+  //   res.send(JSON.stringify(results));
+  // })
+
+  var body = '';
+  req.on('data', function(chunk) {
+    body += chunk;
+  })
+  req.on('end', function() {
+    var suggestion = JSON.parse(body).suggestion;
+    console.log(suggestion);
+    yelp.yelpSearch(suggestion, 94109, 5, function(data) {
         console.log('Wiki Call Executing: ', data);
         res.send(data);
-      }));
-    }
-  }, function(err, results) {
-    res.send(JSON.stringify(results));
-  })
+      });
+    // res.send('suggestionDetails was hit')
+  });
 
 })
 

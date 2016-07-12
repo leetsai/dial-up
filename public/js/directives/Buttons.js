@@ -24,13 +24,13 @@ angular.module('App.ideaBtn', [])
       // Will populate with API data, using dummy data now
       $scope.getList = function(e) {
         if ($scope.moreInfo) {
-          // $scope.moreInfo = false; // The moreInfo area should not be clickable after clicked
           $scope.eventList = true;
+          $scope.moreInfo = false; // The moreInfo area should not be clickable after clicked
 
-          // Ideas.getList($scope.idea)
-          //   .then(function(suggestionDetail) {
-          //     $scope.
-          //   })
+          Ideas.getList($scope.idea)
+            .then(function(suggestionDetail) {
+              $scope.apiResults = suggestionDetail.data;
+            })
 
 
           // $state.go('list', {id:$scope.idea});
