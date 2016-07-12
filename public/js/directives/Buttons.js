@@ -12,7 +12,9 @@ angular.module('App.ideaBtn', [])
           $scope.sideBtns = true;
           $scope.eventList = false;
           $scope.changeClass();
-          $scope.button = "Next"
+          $scope.button = "Next";
+          $scope.yelpResults = '';
+          $scope.wikiResults = '';
         });
       }
       // Gives the Idea display the ability to be clicked

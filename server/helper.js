@@ -28,22 +28,33 @@ var generateRandomIdea = function (object, category, callback) {
   }
 };
 
+// Look into separating the nouns from the verbs for search purposes
+
 var ideas = {
   "gifts": [
     "Flowers",
-    "Make Dinner",
-    "Massage"
+    "Massage",
+    "Bottle of Wine",
+    "Chocolate"
   ],
   "activities": [
     "Picnic",
     "Museum",
-    "Mini Golf",
-    "Local Music"
+    "Local Gardens",
+    "Miniature Golf",
+    "Bowling", 
+    "Local Music",
+    "Stand-up Comedy", 
+    "Hike",
+    "Night Cap",
+    "Make Dinner",
+    "Cinema"
   ],
   "trips": [
-    "Camping Trip",
+    "Camping",
     "Wine Tasting",
-    "Scenic Drive"
+    "Scenic Drive", 
+    "State/National Park"
   ],
   "food": [
     "Brunch",
