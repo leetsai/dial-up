@@ -136,7 +136,7 @@ html, body {
   animation: spinOut 0.3s ease-in;
 }*/
 /* Button List */
-.getIdeaBtn {
+.get-idea-btn {
   width: 250px;
   height: 150px;
   background: linear-gradient(30deg, #f7a72f 50%, #F9C231 50% );
@@ -145,20 +145,25 @@ html, body {
   border: 1px solid #868686;
   font-family: "Optima",Helvetica,Arial,sans-serif;
 }
-.getIdeaBtn:hover {
+.get-idea-btn:hover {
   cursor: pointer;
+  background: linear-gradient(30deg, #f5ac3e 50%, #f9c848 50% );
 }
-.getIdeaBtn:active {
+.get-idea-btn:hover .btn-inner {
+  cursor: pointer;
+  background-color: #fdcd51;
+}
+.get-idea-btn:active {
   font-size: 37px;
   background: linear-gradient(30deg, #da9329 50%, #e4b22e 50% );
   box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.75);
 }
-.btnInner:active {
+.get-idea-btn:active .btn-inner {
   width: 65%;
   height: 55%;
   background-color: #ecbb3a;
 }
-.btnInner {
+.btn-inner {
   display:flex;
   justify-content:center;
   align-items:center;
