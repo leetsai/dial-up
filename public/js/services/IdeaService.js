@@ -25,10 +25,11 @@ angular.module('App.ideaService', [])
       return resp;
     })
   }
-  var getList = function() {
+  var getList = function(suggestion) {
     return $http({
-      method: 'GET',
-      url: '/api/suggestionDetails'
+      method: 'POST',
+      url: '/api/suggestionDetails',
+      data: {suggestion: suggestion}
     })
     .then(function(resp) {
       return resp;
