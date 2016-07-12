@@ -1,4 +1,4 @@
-<!-- <div class="sidebar" idea-list>
+<div class="sidebar" idea-list>
 <div class="btnList">
 <button idea-button class="backBtn" ng-click="goBack()">Back</button>
 </div>
@@ -6,22 +6,27 @@
 <div class="listWrapper" ng-if="eventList" ng-controller="ListController">
 
   <div class="suggestion-details">
-    <span class="suggestion-description">Lorem ipsum dolor sit amet, te nam dolor veniam dolorem, ne quod nonumes his. Veniam primis pro ad. Vero sonet viris ut vix, appetere erroribus et cum. Aeque temporibus te mei. Ipsum vivendo intellegat eos cu, ne vim soleat tamquam accusata. Ex doming debitis cum.</span>
+    <span class="suggestion-description">DESCRIPTION: {{ idea }}</span>
   </div>
-  <div class="list-item">
-    <span class="event name">{{ data.events[0].name }}</span>
-    <span class="event description">Event description</span>
-    <span class="event cost">Event cost/rating</span>
-  </div>
-  <div class="list-item">
-    <span class="event name">Event name</span>
-    <span class="event description">Event description</span>
-    <span class="event cost">Event cost/rating</span>
-  </div>
-  <div class="list-item">
-    <span class="event name">Event name</span>
-    <span class="event description">Event description</span>
-    <span class="event cost">Event cost/rating</span>
+  <div class="list-item" ng-repeat="result in apiResults">
+    <span class="event name">{{ result.business }}</span>
+    <span class="event description"> {{ result.reviews }}</span>
+    <span class="event cost">{{ result.rating }}</span>
   </div>
 
+
 </div>
+
+
+
+<!-- 
+  <div class="list-item">
+    <span class="event name">Event name</span>
+    <span class="event description">Event description</span>
+    <span class="event cost">Event cost/rating</span>
+  </div>
+  <div class="list-item">
+    <span class="event name">Event name</span>
+    <span class="event description">Event description</span>
+    <span class="event cost">Event cost/rating</span>
+  </div> -->
