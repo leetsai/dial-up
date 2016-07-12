@@ -4,7 +4,7 @@ var chai = require('chai');
 var expect = chai.expect;
 
 describe('wikipedia', function() {
-  it('should take a string as an input', function() {
-    
+  it('should be a function', function() {
+    expect(wikipedia.wikiSearch).to.be.a('function');
   });
 })
