@@ -8,18 +8,7 @@ var yelp = new Yelp({
   token_secret: process.env['TOKEN_SECRET']
 });
 
-// var yelpSearch = function(search, location, cb) {
-//   yelp.search({term: search, location: location})
-//     .then(function(data) {
-//       cb(data);
-//       console.log(data);
-//     })
-//     .catch(function(err) {
-//       console.error(err);
-//     });
-//   };
-
-var yelpSearch = function(search, location, limit, cb) {
+var yelpSearch = function(search, location, limitResults, cb) {
   yelp.search({term: search, location: location})
     .then(function(data) {
       // Show buisnesses only; not interested in coordinates
@@ -29,7 +18,7 @@ var yelpSearch = function(search, location, limit, cb) {
         return el.rating >= 4 &&
                el.is_closed === false;
       });
-      var truncatedList = filteredList.slice(0, limit);
+      var truncatedList = filteredList.slice(0, limitResults);
       // Create newArr to store categories we're interested in pulling
       var newArr = [];
       var finalList = truncatedList.map(function(el) {
@@ -47,10 +36,10 @@ var yelpSearch = function(search, location, limit, cb) {
     });
   };
 
-  // // *** UNCOMMENT TO SEE LOG OF QUERY ***
-  // yelpSearch("lunch", "san francisco", 10, function(element) {
-  //   console.log(element);
-  // });
+  // *** UNCOMMENT TO SEE LOG OF QUERY ***
+  yelpSearch("lunch", "san francisco", 10, function(element) {
+    console.log(element);
+  });
 
 module.exports = {
   yelpSearch: yelpSearch,
