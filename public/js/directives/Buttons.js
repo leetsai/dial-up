@@ -1,6 +1,6 @@
 angular.module('App.ideaBtn', [])
 
-.directive('ideaButton', ['Ideas', '$state', function(Ideas, $state) {
+.directive('ideaButton', ['Ideas', '$state', 'DisplayGif', function(Ideas, $state, DisplayGif) {
   return {
     link: function($scope, e, attr) {
       // Gets idea and flags controller for more info to show
@@ -37,6 +37,14 @@ angular.module('App.ideaBtn', [])
             .then(function(resp) {
               $scope.wikiResults = resp.data;
             });
+
+          DisplayGif.startGif();
+
+          Ideas.getList($scope.idea)
+            .then(function(suggestionDetail) {
+              DisplayGif.endGif();
+              $scope.apiResults = suggestionDetail.data;
+            })
 
           // $state.go('list', {id:$scope.idea});
           // console.log('Needs to populate list');
