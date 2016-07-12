@@ -109,6 +109,13 @@ html, body {
 #filterMenu {
   border: 1px solid #868686;
 }
+.suggestion-details {
+  margin: 10px;
+  padding: 10px;
+}
+.suggestion-description {
+
+}
 /* Select options */
 /*@keyframes spinIn {
   0% {
