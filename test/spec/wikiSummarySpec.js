@@ -30,10 +30,4 @@ describe('wikipedia', function() {
     });
   });
 
-  // it('should encode argument & integrate into url.', function() {
-  //   wikipedia.wikiSearch('Basketball', function(data) {
-  //     expect(data).to.be.a('string');
-  //   });
-  // });
-
 })
