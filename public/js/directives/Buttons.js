@@ -24,9 +24,17 @@ angular.module('App.ideaBtn', [])
       // Will populate with API data, using dummy data now
       $scope.getList = function(e) {
         if ($scope.moreInfo) {
+          // $scope.moreInfo = false; // The moreInfo area should not be clickable after clicked
           $scope.eventList = true;
+
+          // Ideas.getList($scope.idea)
+          //   .then(function(suggestionDetail) {
+          //     $scope.
+          //   })
+
+
           // $state.go('list', {id:$scope.idea});
-          console.log('Needs to populate list');
+          // console.log('Needs to populate list');
         }
       }
       // Allows directive to track filter value that is passed using getIdea()

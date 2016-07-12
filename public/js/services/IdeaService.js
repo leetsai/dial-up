@@ -6,6 +6,14 @@ angular.module('App.ideaService', [])
     data: null
   };
 
+  var ideaDetails = {
+    ideaDescription: null,
+    suggestion_title: null,
+    suggestion_description: null,
+    suggestion_cost: null,
+    suggestion_rating: null
+  }
+
   var getIdea = function(filter) {
     return $http({
       method: 'POST',
