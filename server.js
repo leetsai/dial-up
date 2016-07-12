@@ -59,12 +59,14 @@ app.get('/api/suggestionDetails', function(req, res, next) {
 
     yelp: function(callback) {
       callback(null, yelp.yelpSearch(req.body.suggestion, req.body.location, function(data) {
+        console.log('Yelp Call Executing: ', data);
         res.send(data);
       }));
     },
 
     wiki: function(callback) {
       callback(null, wiki.wikiSearch(req.body.suggestion, function(data) {
+        console.log('Wiki Call Executing: ', data);
         res.send(data);
       }));
     }
