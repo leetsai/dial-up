@@ -26,8 +26,10 @@ var yelpSearch = function(search, location, limitResults, cb) {
         newArr.push({'business': el.name,
                      'reviews': el.snippet_text,
                      'phone': el.display_phone,
-                     'rating': el.rating,
-                     'rating_image': el.rating_img_url_small})
+                     'rating': el.rating.toFixed(1),
+                     'rating_image': el.rating_img_url_small,
+                     'image_url': el.image_url,
+                     'yelp_url': el.url})
       });
       cb(newArr);
     })
@@ -36,10 +38,10 @@ var yelpSearch = function(search, location, limitResults, cb) {
     });
   };
 
-  // *** UNCOMMENT TO SEE LOG OF QUERY ***
-  yelpSearch("lunch", "san francisco", 10, function(element) {
-    console.log(element);
-  });
+  // // *** UNCOMMENT TO SEE LOG OF QUERY ***
+  // yelpSearch("lunch", "san francisco", 10, function(element) {
+  //   console.log(element);
+  // });
 
 module.exports = {
   yelpSearch: yelpSearch,
