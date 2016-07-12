@@ -10,6 +10,7 @@ html, body {
 .container {
   margin: 0 auto;
   width: 90%;
+  margin-bottom: 60px;
 }
 .centerMessage {
   background-color: white;
@@ -52,7 +53,7 @@ html, body {
 }
 .footer {
   z-index: 10000;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   font-size: 13px;
