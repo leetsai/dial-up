@@ -39,10 +39,6 @@ var yelpSearch = function(search, location, limitResults, cb) {
     });
   };
 
-  // // *** UNCOMMENT TO SEE LOG OF QUERY ***
-  // yelpSearch("lunch", "san francisco", 10, function(element) {
-  //   console.log(element);
-  // });
 
 module.exports = {
   yelpSearch: yelpSearch
