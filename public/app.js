@@ -8,6 +8,7 @@ angular.module('App',
   'App.ideaBtn',
   'App.gifService',
   'App.listCtrl',
+  'App.signUpCtrl',
   'ngAnimate',
   'ui.router'
 ])
