@@ -13,25 +13,25 @@ html, body {
 }
 .container {
   margin: 0 auto;
-  width: 90%;
   margin-bottom: 60px;
+  width: 90%;
 }
 .centerMessage {
   background-color: white;
   padding: 10px;
-  /*border: 1px solid #868686;*/
-  width: 55%;
   margin: 0 auto;
-  margin-top: 40px;
   margin-bottom: 40px;
   overflow: hidden;
   line-height: 60px;
-  font-size: 45px;
+  font-size: 40px;
   opacity: .9;
   border-radius: 5px;
+  width: 75%;
 }
 .centerMessageText {
   display: block;
+  color: #3e4b5a;
+  text-transform:uppercase;
 }
 .getInfo:hover {
   background-color: white;
@@ -39,7 +39,7 @@ html, body {
   cursor: pointer
 }
 .getInfo:active {
-  font-size: 49px;
+  font-size: 38px;
   box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.5);
 }
 .noInfo {
@@ -47,8 +47,12 @@ html, body {
 
 .wrapper {
   overflow: hidden;
-  margin: 0 auto;
   text-align: center;
+  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-radius: 5px;
+  background-color: rgba(245,245,245,.7);
 }
 
 .navbar {
@@ -78,18 +82,17 @@ html, body {
   margin: 0 auto;
   width: 75%;
   margin-bottom: 40px;
+  display: none;
+  max-height: 0px;
   /*border: 1px solid #868686;*/
 }
 /* List values */
-.list-item > suggestion-description {
-  text-align left;
+.list-item > .suggestion-description {
+  text-align: center;
   margin: 10px;
   /*padding: 10px;*/
   display: block;
-  text-align: left;
-  background-color: gray;
-  opacity: .9;
-  border-radius: 5px
+  border-radius: 5px;
 }
 
 a {
@@ -105,6 +108,7 @@ a {
   background-color: white;
   opacity: .9;
   margin: 5px;
+  color: #3e4b5a;
 }
 .list-item:hover {
   opacity: 1;
@@ -190,41 +194,33 @@ a {
 }*/
 /* Button List */
 .get-idea-btn {
-  width: 250px;
-  height: 150px;
-  background: linear-gradient(30deg, #f7a72f 50%, #F9C231 50% );
-  font-size: 35px;
-  margin: 0 40px;
-  border: 1px solid #868686;
-  font-family: "Optima",Helvetica,Arial,sans-serif;
+	width:250px;
+  height:125px;
+  display:inline-block;
+  font-family:Arial, "Helvetica", sans-serif;
+  font-size:30px;
+  font-weight:bold;
+  color:#fff;
+  text-decoration:none;
+  text-transform:uppercase;
+  text-align:center;
+  text-shadow:1px 1px 0px #07526e;
+  padding-top:6px;
+  margin-left:auto;
+  margin-right:auto;
+  position:relative;
+  cursor:pointer;
+  border: none;
+  background: #109bce;
+  border-radius: 5px;
+  box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #07526e, 0px 10px 5px #999;
 }
 .get-idea-btn:hover {
-  cursor: pointer;
-  background: linear-gradient(30deg, #f5ac3e 50%, #f9c848 50% );
-}
-.get-idea-btn:hover .btn-inner {
-  cursor: pointer;
-  background-color: #fdcd51;
+  background: #2aa2ce;
 }
 .get-idea-btn:active {
-  font-size: 30px;
-  background: linear-gradient(30deg, #da9329 50%, #e4b22e 50% );
-  box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.75);
-}
-.get-idea-btn:active .btn-inner {
-  width: 65%;
-  height: 55%;
-  background-color: #ecbb3a;
-}
-.btn-inner {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background-color: #ffca3f;
-  height: 60%;
-  width: 70%;
-  margin: 0 auto;
-  padding: 10px;
+  top:3px;
+  box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #07526e, 0px 5px 3px #999;
 }
 .ideaBtnNext {
   background-color: red !important;
@@ -257,7 +253,6 @@ a {
   margin-bottom: 10px;
   border-radius: 6px;
 }
-
 .spinner {
   display: none;
   margin: auto;
