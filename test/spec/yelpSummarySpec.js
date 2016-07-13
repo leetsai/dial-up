@@ -3,22 +3,28 @@ var chai = require('chai');
 var expect = chai.expect;
 var Yelp = require('../../server/externalAPIs/yelp.js');
 
-var env = require('dotenv').config();
-
-const creds = {
-  consumer_key: process.env['CONSUMER_KEY'],
-  consumer_secret: process.env['CONSUMER_SECRET'],
-  token: process.env['TOKEN'],
-  token_secret: process.env['TOKEN_SECRET']
-};
-
-const yelp = new Yelp(creds);
-
 describe('Yelp Testing Suite', function() {
-  it('should return an array', function() {
-    // expect(yelp().to.be.a("array"));
-    expect(yelp.search("cake", "taiwan", 10, function(el) {
-      return el;
-    })).to.be.a('array');
+  it('should be a function', function() {
+    expect(Yelp.yelpSearch).to.be.a('function');
   });
-})
+
+
+  it('should return an array', function() {
+    Yelp.yelpSearch('food', 'San Francisco', 1, function(data) {
+      expect(data).to.be.a('array');
+    });  
+  });
+
+  it('array should contains objects', function() {
+    Yelp.yelpSearch('food', 'San Francisco', 1, function(data) {
+      expect(data[0]).to.be.a('object');
+    });
+  });
+
+  it('should have properties..', function() {
+    Yelp.yelpSearch('food', 'San Francisco', 1, function(data) {
+      expect(data[0]).to.have.any.keys('business', 'reviews', 'reviews_count', 'phone', 'rating', 'rating_image', 'image_url', 'yelp_url');
+    });
+  });
+
+});
