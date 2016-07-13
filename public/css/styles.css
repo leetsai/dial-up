@@ -82,6 +82,8 @@ html, body {
   margin: 0 auto;
   width: 75%;
   margin-bottom: 40px;
+  display: none;
+  max-height: 0px;
   /*border: 1px solid #868686;*/
 }
 /* List values */
@@ -251,7 +253,6 @@ a {
   margin-bottom: 10px;
   border-radius: 6px;
 }
-
 .spinner {
   display: none;
   margin: auto;
