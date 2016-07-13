@@ -97,6 +97,26 @@ var ideas = {
     { display: "Go see a movie",
       yelpSearch: "movies",
       wikiSearch: "film"
+    },
+    { display: "Find something at a flea market",
+      yelpSearch: "flea market",
+      wikiSearch: "flea market"
+    },
+    { display: "Can you escape the room?",
+      yelpSearch: "escape the room",
+      wikiSearch: "escape the room"
+    },
+    { display: "Visit an aquarium",
+      yelpSearch: "aquarium",
+      wikiSearch: "aquarium"
+    },
+    { display: "Win something at the arcade",
+      yelpSearch: "arcades",
+      wikiSearch: "amusement arcade"
+    },
+    { display: "Take a cooking class",
+      yelpSearch: "cooking class",
+      wikiSearch: ""
     }
   ],
   "Quick Trips": [
@@ -115,6 +135,26 @@ var ideas = {
     { display: "Visit a national/state park",
       yelpSearch: "National Park",
       wikiSearch: "National Park"
+    },
+    { display: "Be the next top chef",
+      yelpSearch: "cooking lessons",
+      wikiSearch: "cooking"
+    },
+    { display: "Go rock climbing",
+      yelpSearch: "rock climbing",
+      wikiSearch: "rock climbing"
+    },
+    { display: "Ride a wave!",
+      yelpSearch: "surfing",
+      wikiSearch: "surfing"
+    },
+    { display: "Go to the beach",
+      yelpSearch: "beach",
+      wikiSearch: "beach"
+    },
+    { display: "Skydiving!",
+      yelpSearch: "skydiving",
+      wikiSearch: "skydiving"
     }
   ],
   "What to Eat": [
@@ -165,6 +205,22 @@ var ideas = {
     { display: "Pizza",
       yelpSearch: "Pizza",
       wikiSearch: "Pizza"
+    },
+    { display: "Afternoon tea",
+      yelpSearch: "afternoon tea",
+      wikiSearch: "afternoon tea"
+    },
+    { display: "Dim sum",
+      yelpSearch: "dim sum",
+      wikiSearch: "dim sum"
+    },
+    { display: "Sweet tooth",
+      yelpSearch: "desserts",
+      wikiSearch: "dessert"
+    },
+    { display: "Treat yourself: Michelin Star Restaurants",
+      yelpSearch: "michelin star",
+      wikiSearch: "michelin guide"
     }
   ]
 }
