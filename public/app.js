@@ -20,7 +20,7 @@ angular.module('App',
     templateUrl: 'views/main.html',
     controller: 'IdeaController'
   })
-  $locationProvider.html5Mode(true);
+  // $locationProvider.html5Mode(true);
   // routing for old view swap - not to be used with new look
   // .state('list', {
   //   url: '/:id',
