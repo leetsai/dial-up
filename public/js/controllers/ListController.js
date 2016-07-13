@@ -11,3 +11,19 @@ angular.module('App.listCtrl', [])
   }]
   console.log($scope.data)
 }])
+.service('DisplayGif', function() {
+  function startGif() {
+    $('.spinner').show();
+    console.log("startGif is running")
+  }
+
+  function endGif() {
+    $('.spinner').hide();
+    console.log("endGif is running")
+  }
+
+  return {
+    startGif: startGif,
+    endGif: endGif
+  };
+})

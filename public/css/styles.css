@@ -5,7 +5,7 @@ html, body {
   margin: 0;
   height: 100%;
   /*background-image: url("http://www.pretty-streets.com/portal/img_external/layer/bg-heading-dark.jpg");*/
-  background-image: url('./walls.jpg');  
+  background-image: url('./walls.jpg');
   background-repeat: no-repeat;
   background-size: 100% auto;
   font-family: "Optima",Helvetica,Arial,sans-serif;
@@ -253,4 +253,11 @@ a {
   width: 80px;
   margin-bottom: 10px;
   border-radius: 6px;
+}
+
+.spinner {
+  display: none;
+  margin: auto;
+  height: 125px;
+  width: 125px;
 }
