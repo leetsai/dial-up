@@ -6,6 +6,7 @@ angular.module('App',
   'App.ideaCtrl',
   'App.ideaService',
   'App.ideaBtn',
+  'App.gifService',
   'App.listCtrl',
   'ngAnimate',
   'ui.router'
