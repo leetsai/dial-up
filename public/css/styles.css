@@ -340,5 +340,14 @@ input:hover {
   border-color: rgba(238, 131, 89, 0.87);
 }
 
+/*sign up button* -------------------*/
+
+.signUpButton {
+  position: absolute;
+  left: 95%;
+  bottom: 95.5%;
+}
+
+/*end sign up button* -------------------*/
 
 /*end of sign in page ----------------------------------------*/
