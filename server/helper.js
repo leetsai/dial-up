@@ -130,6 +130,10 @@ var ideas = {
     { display: "Go on a fishing excursion",
       yelpSearch: "fishing",
       wikiSearch: "fishing"
+    },
+    { display: "Catch a wave",
+      yelpSearch: "surfing",
+      wikiSearch: "surfing"
     }
   ],
   "Quick Trips": [
@@ -148,18 +152,6 @@ var ideas = {
     { display: "Visit a national/state park",
       yelpSearch: "National Park",
       wikiSearch: "National_park"
-    },
-    { display: "Be the next top chef",
-      yelpSearch: "cooking lessons",
-      wikiSearch: "cooking"
-    },
-    { display: "Go rock climbing",
-      yelpSearch: "rock climbing",
-      wikiSearch: "rock climbing"
-    },
-    { display: "Ride a wave!",
-      yelpSearch: "surfing",
-      wikiSearch: "surfing"
     },
     { display: "Go to the beach",
       yelpSearch: "beach",
