@@ -12,14 +12,15 @@ angular.module('App',
   'ui.router'
 ])
 
-.config(function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('/');
+.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+  $urlRouterProvider.otherwise('/getidea');
   $stateProvider
   .state('home', {
-    url: '/',
+    url: '/getidea',
     templateUrl: 'views/main.html',
     controller: 'IdeaController'
   })
+  $locationProvider.html5Mode(true);
   // routing for old view swap - not to be used with new look
   // .state('list', {
   //   url: '/:id',

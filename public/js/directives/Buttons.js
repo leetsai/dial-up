@@ -35,7 +35,7 @@ angular.module('App.ideaBtn', [])
             DisplayGif.endGif();
             $('.listWrapper').css("opacity", "0").show();
             $('.listWrapper ').animate({'max-height': "1000px"}, 300, 'linear', function () {
-              $('.listWrapper').animate({opacity: "1"}, 500);
+              $('.listWrapper').animate({opacity: "1"}, 300);
               $('.get-idea-btn').show();
             });
           });
