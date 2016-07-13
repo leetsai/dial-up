@@ -86,9 +86,9 @@ var ideas = {
       yelpSearch: "Hike",
       wikiSearch: "Hiking"
     },
-    { display: "Get a night cap at a local bar",
+    { display: "Get a nightcap at a local bar",
       yelpSearch: "cocktail bar",
-      wikiSearch: "night cap"
+      wikiSearch: "Nightcap_(beverage)"
     },
     { display: "Make dinner together",
       yelpSearch: "grocery store",
