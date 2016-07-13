@@ -195,8 +195,8 @@ var ideas = {
       wikiSearch: "German cuisine"
     },
     { display: "Tapas",
-      yelpSearch: "Tapas food",
-      wikiSearch: "Tapas cuisine"
+      yelpSearch: "Tapas",
+      wikiSearch: "Tapas"
     },
     { display: "Burgers",
       yelpSearch: "hamburger",
