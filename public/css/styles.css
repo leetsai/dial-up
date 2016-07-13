@@ -18,8 +18,8 @@ html, body {
 .centerMessage {
   background-color: white;
   padding: 10px;
-  border: 1px solid #868686;
-  width: 75%;
+  /*border: 1px solid #868686;*/
+  width: 50%;
   margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -27,12 +27,14 @@ html, body {
   line-height: 60px;
   font-size: 50px;
   opacity: .9;
+  border-radius: 5px;
 }
 .centerMessageText {
   display: block;
 }
 .getInfo:hover {
-  background-color: #fffaea;
+  background-color: white;
+  opacity: 1;
   cursor: pointer
 }
 .getInfo:active {
@@ -190,7 +192,7 @@ a {
   width: 250px;
   height: 150px;
   background: linear-gradient(30deg, #f7a72f 50%, #F9C231 50% );
-  font-size: 40px;
+  font-size: 35px;
   margin: 0 40px;
   border: 1px solid #868686;
   font-family: "Optima",Helvetica,Arial,sans-serif;
@@ -204,7 +206,7 @@ a {
   background-color: #fdcd51;
 }
 .get-idea-btn:active {
-  font-size: 37px;
+  font-size: 30px;
   background: linear-gradient(30deg, #da9329 50%, #e4b22e 50% );
   box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.75);
 }
