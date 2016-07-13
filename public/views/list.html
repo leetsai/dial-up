@@ -7,11 +7,11 @@
 <img class="spinner" src='/loading_gif/squidward.gif'>
 <div class="listWrapper" ng-if="eventList" ng-controller="ListController">
 
-  <div class="list-item">
-    <a href="{{ wikiResults.link }}" target="_blank">
+  <a href="{{ wikiResults.link }}" target="_blank">
+    <div class="list-item">
       <span class="suggestion-description">DESCRIPTION: {{ wikiResults.description }}</span>
-    </a>
-  </div>
+    </div>
+  </a>
   <div ng-repeat="result in yelpResults | orderBy: '-rating' ">
     <a href="{{ result.yelp_url }}" target="_blank">
       <div class="list-item">
