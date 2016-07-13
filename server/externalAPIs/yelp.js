@@ -45,6 +45,5 @@ var yelpSearch = function(search, location, limitResults, cb) {
   // });
 
 module.exports = {
-  yelpSearch: yelpSearch,
-  yelpKeys: yelp
+  yelpSearch: yelpSearch
 }
