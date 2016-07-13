@@ -7,7 +7,8 @@ angular.module('App.ideaBtn', [])
       $scope.getIdea = function() {
         Ideas.getIdea($scope.filter)
         .then(function(idea) {
-          $scope.idea = idea.data;
+          $scope.data = idea.data;
+          $scope.idea = idea.data.display;
           $scope.moreInfo = true;
           $scope.sideBtns = true;
           $scope.eventList = false;
@@ -29,12 +30,12 @@ angular.module('App.ideaBtn', [])
           $scope.eventList = true;
           $scope.moreInfo = false; // The moreInfo area should not be clickable after clicked
 
-          Ideas.getYelp($scope.idea)
+          Ideas.getYelp($scope.data.yelpSearch)
             .then(function(resp) {
               $scope.yelpResults = resp.data;
               DisplayGif.endGif();
             });
-          Ideas.getWiki($scope.idea)
+          Ideas.getWiki($scope.data.wikiSearch)
             .then(function(resp) {
               $scope.wikiResults = resp.data;
             });
