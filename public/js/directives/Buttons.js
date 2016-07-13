@@ -32,6 +32,7 @@ angular.module('App.ideaBtn', [])
           Ideas.getYelp($scope.idea)
             .then(function(resp) {
               $scope.yelpResults = resp.data;
+              DisplayGif.endGif();
             });
           Ideas.getWiki($scope.idea)
             .then(function(resp) {
@@ -40,11 +41,6 @@ angular.module('App.ideaBtn', [])
 
           DisplayGif.startGif();
 
-          Ideas.getList($scope.idea)
-            .then(function(suggestionDetail) {
-              DisplayGif.endGif();
-              $scope.apiResults = suggestionDetail.data;
-            })
 
           // $state.go('list', {id:$scope.idea});
           // console.log('Needs to populate list');
