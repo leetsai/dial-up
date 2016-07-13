@@ -12,7 +12,9 @@ angular.module('App.ideaBtn', [])
           $scope.sideBtns = true;
           $scope.eventList = false;
           $scope.changeClass();
-          $scope.button = "Next"
+          $scope.button = "Next";
+          $scope.yelpResults = '';
+          $scope.wikiResults = '';
         });
       }
       // Gives the Idea display the ability to be clicked
@@ -27,11 +29,14 @@ angular.module('App.ideaBtn', [])
           $scope.eventList = true;
           $scope.moreInfo = false; // The moreInfo area should not be clickable after clicked
 
-          Ideas.getList($scope.idea)
-            .then(function(suggestionDetail) {
-              $scope.apiResults = suggestionDetail.data;
-            })
-
+          Ideas.getYelp($scope.idea)
+            .then(function(resp) {
+              $scope.yelpResults = resp.data;
+            });
+          Ideas.getWiki($scope.idea)
+            .then(function(resp) {
+              $scope.wikiResults = resp.data;
+            });
 
           // $state.go('list', {id:$scope.idea});
           // console.log('Needs to populate list');

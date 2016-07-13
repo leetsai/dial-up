@@ -6,13 +6,24 @@
 </div> -->
 <div class="listWrapper" ng-if="eventList" ng-controller="ListController">
 
-  <div class="suggestion-details">
-    <span class="suggestion-description">DESCRIPTION: {{ idea }}</span>
+  <div class="list-item">
+    <span class="suggestion-description">DESCRIPTION: {{ wikiResults.description }}</span>
   </div>
-  <div class="list-item" ng-repeat="result in apiResults">
-    <span class="event name">{{ result.business }}</span>
-    <span class="event description"> {{ result.reviews }}</span>
-    <span class="event rating">Rating: {{ result.rating }}</span>
+  <div ng-repeat="result in yelpResults">
+    <a href="{{ result.yelp_url }}" target="_blank">
+      <div class="list-item">
+        <div class="event name">
+          <span>{{ result.business }}</span><br>
+          <span>{{ result.phone }}</span>
+        </div>
+        <span class="event description">Review: {{ result.reviews }}</span>
+        <div class="event rating">
+          <span >Rating: {{ result.rating }}</span>
+          <img src="{{ result.rating_image }}" class="yelpstars">
+        </div>
+        
+      </div>
+    </a>
   </div>
 </div>
 

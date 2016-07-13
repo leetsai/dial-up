@@ -54,8 +54,7 @@ app.post('/api/getIdea', function(req, res, next) {
 });
 
 
-app.post('/api/suggestionDetails', function(req, res, next) {
-
+// app.post('/api/suggestionDetails', function(req, res, next) {
   // async.parallel({
 
   //   yelp: function(callback) {
@@ -74,7 +73,10 @@ app.post('/api/suggestionDetails', function(req, res, next) {
   // }, function(err, results) {
   //   res.send(JSON.stringify(results));
   // })
+// })
 
+
+app.post('/api/yelpDetails', function(req, res, next) {
   var body = '';
   req.on('data', function(chunk) {
     body += chunk;
@@ -83,22 +85,26 @@ app.post('/api/suggestionDetails', function(req, res, next) {
     var suggestion = JSON.parse(body).suggestion;
     console.log(suggestion);
     yelp.yelpSearch(suggestion, 94109, 5, function(data) {
-        console.log('Wiki Call Executing: ', data);
-        res.send(data);
-      });
-    // res.send('suggestionDetails was hit')
+      console.log('Yelp Call Executing: ', data);
+      res.send(data);
+    });
   });
+});
 
-})
-
-
-
-
-// app.get('/api/yelp', function(req, res, next) {
-// });
-
-// app.get('/api/wikipedia', function(req, res, next) {
-// });
+app.post('/api/wikiDetails', function(req, res, next) {
+  var body = '';
+  req.on('data', function(chunk) {
+    body += chunk;
+  })
+  req.on('end', function() {
+    var suggestion = JSON.parse(body).suggestion;
+    console.log(suggestion);
+    wiki.wikiSearch(suggestion, function(data) {
+      console.log('Wiki Call Executing: ', data);
+      res.send(data);
+    });
+  });
+});
 
 
 

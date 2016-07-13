@@ -6,14 +6,6 @@ angular.module('App.ideaService', [])
     data: null
   };
 
-  var ideaDetails = {
-    ideaDescription: null,
-    suggestion_title: null,
-    suggestion_description: null,
-    suggestion_cost: null,
-    suggestion_rating: null
-  }
-
   var getIdea = function(filter) {
     return $http({
       method: 'POST',
@@ -25,19 +17,36 @@ angular.module('App.ideaService', [])
       return resp;
     })
   }
-  var getList = function(suggestion) {
+  var getYelp = function(suggestion) { // include location, resultCount
     return $http({
       method: 'POST',
-      url: '/api/suggestionDetails',
+      url: '/api/yelpDetails',
+      data: {
+        suggestion: suggestion //, 
+        // location: location,
+        // resultCount: resultCount
+      }
+    })
+    .then(function(resp) {
+      return resp;
+    })
+  }
+
+  var getWiki = function(suggestion) {
+    return $http({
+      method: 'POST',
+      url: '/api/wikiDetails',
       data: {suggestion: suggestion}
     })
     .then(function(resp) {
       return resp;
     })
   }
+
   return {
     currentIdea: currentIdea,
     getIdea: getIdea,
-    getList: getList
+    getYelp: getYelp,
+    getWiki: getWiki
   }
 }])

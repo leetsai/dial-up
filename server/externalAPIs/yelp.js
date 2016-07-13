@@ -28,7 +28,7 @@ var yelpSearch = function(search, location, limitResults, cb) {
                      'reviews_count': el.review_count,
                      'phone': el.display_phone,
                      'rating': el.rating.toFixed(1),
-                     'rating_image': el.rating_img_url_small,
+                     'rating_image': el.rating_img_url_large,
                      'image_url': el.image_url,
                      'yelp_url': el.url})
       });
