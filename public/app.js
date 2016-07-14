@@ -8,12 +8,12 @@ angular.module('App',
   'App.ideaBtn',
   'App.gifService',
   'App.listCtrl',
-  'App.signUpCtrl',
+  // 'App.signUpCtrl',
   'ngAnimate',
   'ui.router'
 ])
 
-.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+.config(function($stateProvider, $urlRouterProvider) { //, $locationProvider) {
   $urlRouterProvider.otherwise('/getidea');
   $stateProvider
   .state('home', {
@@ -24,7 +24,7 @@ angular.module('App',
   // $locationProvider.html5Mode(true);
   // routing for old view swap - not to be used with new look
     .state('home.list', {
-      url: '{searchTerm}',
+      url: '/{searchTerm}',
       templateUrl: 'views/list.html',
       controller: 'ListController'
     })

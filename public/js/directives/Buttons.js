@@ -27,26 +27,20 @@ angular.module('App.ideaBtn', [])
       // Will populate with API data, using dummy data now
       $scope.getList = function(e) {
         if ($scope.moreInfo) {
-          $scope.eventList = true;
-          $scope.moreInfo = false; // The moreInfo area should not be clickable after clicked
-          
-          Ideas.getYelp($scope.data.yelpSearch)
-          .then(function(resp) {
-            $scope.yelpResults = resp.data;
-            DisplayGif.endGif();
-            $('.listWrapper').css("opacity", "0").show();
-            $('.listWrapper ').animate({'max-height': "1000px"}, 300, 'linear', function () {
-              $('.listWrapper').animate({opacity: "1"}, 300);
-              $('.get-idea-btn').show();
-            });
-          });
-          Ideas.getWiki($scope.data.wikiSearch)
-          .then(function(resp) {
-            $scope.wikiResults = resp.data;
-          });
-          $('.get-idea-btn').hide();
-          DisplayGif.startGif();
+          // $scope.eventList = true;
+          // $scope.moreInfo = false; // The moreInfo area should not be clickable after clicked
 
+          Ideas.getYelp($scope.data.yelpSearch)
+            .then(function(resp) {
+              $scope.yelpResults = resp.data;
+              DisplayGif.endGif();
+            });
+          Ideas.getWiki($scope.data.wikiSearch)
+            .then(function(resp) {
+              $scope.wikiResults = resp.data;
+            });
+
+          DisplayGif.startGif();
 
 
           // $state.go('list', {id:$scope.idea});
