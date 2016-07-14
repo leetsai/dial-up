@@ -50,7 +50,7 @@ html, body {
   padding-top: 40px;
   padding-bottom: 40px;
   border-radius: 5px;
-  background-color: rgba(245,245,245,.7);
+  background-color: rgba(233, 246, 251, 0.55);
 }
 
 .navbar {
@@ -211,14 +211,14 @@ a {
   border: none;
   background: #109bce;
   border-radius: 5px;
-  box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #07526e, 0px 10px 5px #999;
+  box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #07526e, 0px 10px 5px #656565;
 }
 .get-idea-btn:hover {
   background: #2aa2ce;
 }
 .get-idea-btn:active {
   top:3px;
-  box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #07526e, 0px 5px 3px #999;
+  box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #07526e, 0px 5px 3px #656565;
 }
 .ideaBtnNext {
   background-color: red !important;
