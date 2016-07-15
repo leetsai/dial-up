@@ -1,8 +1,8 @@
 angular.module('App.sidebar', [])
 
-.directive('sideBar', ['Ideas', '$state', function(Ideas, $state) {
+.directive('sidepanel', ['Ideas', '$state', function(Ideas, $state) {
   return {
     restrict: 'E',
-    templateUrl: 'views/sidebar.html'
+    templateUrl: 'views/sidebar.html',
   }
 }])
