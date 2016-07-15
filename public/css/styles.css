@@ -14,7 +14,8 @@ html, body {
 .container {
   margin: 0 auto;
   margin-bottom: 60px;
-  width: 85%;
+  margin-left: 250px;
+  margin-right: 250px;
 }
 .centerMessage {
   background-color: white;
@@ -25,8 +26,6 @@ html, body {
   line-height: 60px;
   font-size: 40px;
   opacity: .9;
-  border-radius: 5px;
-  width: 80%;
 }
 .centerMessageText {
   display: block;
@@ -157,6 +156,10 @@ a {
   background-color: #3c4b5b;
   opacity: .9;
 }*/
+#mySidebar {
+  width: 250px;
+  position: fixed;
+}
 .sidebar-list {
   list-style: none;
   padding: 0;

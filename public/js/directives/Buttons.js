@@ -27,8 +27,8 @@ angular.module('App.ideaBtn', [])
       // Will populate with API data, using dummy data now
       $scope.getList = function(e) {
         if ($scope.moreInfo) {
-          // $scope.eventList = true;
-          // $scope.moreInfo = false; // The moreInfo area should not be clickable after clicked
+          $scope.eventList = true;
+          $scope.moreInfo = false; // The moreInfo area should not be clickable after clicked
 
           Ideas.getYelp($scope.data.yelpSearch)
             .then(function(resp) {
