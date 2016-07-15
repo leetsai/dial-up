@@ -10,8 +10,6 @@ angular.module('App.ideaBtn', [])
           $scope.data = idea.data;
           $scope.idea = idea.data.display;
           $scope.moreInfo = true;
-          $scope.sideBtns = true;
-          // $scope.eventList = false;
           $scope.changeClass();
           $scope.button = "Next";
           $scope.yelpResults = '';
@@ -39,7 +37,6 @@ angular.module('App.ideaBtn', [])
               $('.listWrapper').animate({opacity: "1"}, 300);
               $('.get-idea-btn').show();
             });
-
           });
           Ideas.getWiki($scope.data.wikiSearch)
           .then(function(resp) {
@@ -47,10 +44,6 @@ angular.module('App.ideaBtn', [])
           });
           $('.get-idea-btn').hide();
           DisplayGif.startGif();
-
-
-          // $state.go('list', {id:$scope.idea});
-          // console.log('Needs to populate list');
         }
       }
       // Allows directive to track filter value that is passed using getIdea()

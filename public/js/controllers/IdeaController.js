@@ -8,6 +8,5 @@ angular.module('App.ideaCtrl', [])
   // These 4 dictate whether more information can be shown
   $scope.class = 'noInfo';
   $scope.moreInfo = false;
-  $scope.sideBtns = false;
-  // $scope.eventList = false;
+  $scope.eventList = false;
 }])

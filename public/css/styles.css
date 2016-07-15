@@ -14,8 +14,8 @@ html, body {
 .container {
   margin: 0 auto;
   margin-bottom: 60px;
-  margin-left: 250px;
-  margin-right: 250px;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 .centerMessage {
   background-color: white;
@@ -51,15 +51,24 @@ html, body {
   padding-top: 40px;
   padding-bottom: 40px;
   border-radius: 5px;
+  min-width: 700px;
+  min-height: 280px;
   background-color: rgba(233, 246, 251, 0.55);
 }
 
 .navbar {
   height: 40px;
   line-height: 40px;
+  padding: 0px 30px;
   margin: 0;
   border-bottom: 1px solid #868686;
   background-color: rgba(107, 124, 142, .9);
+}
+.navbar > div {
+  float: right;
+}
+.navbar > div:first-child {
+  float: left;
 }
 .footer {
   z-index: 10000;
@@ -81,7 +90,7 @@ html, body {
   margin: 0 auto;
   width: 90%;
   margin-bottom: 40px;
-  display: none;*/
+  display: none;
   max-height: 0px;
   /*border: 1px solid #868686;*/
 }
@@ -157,8 +166,14 @@ a {
   opacity: .9;
 }*/
 #mySidebar {
-  width: 250px;
+  width: 200px;
   position: fixed;
+  margin-top: 40px;
+}
+.menu-link {
+  background-color: rgba(233, 246, 251, 0.55);
+  margin-right: 40px;
+  border-top-right-radius: 5px;
 }
 .sidebar-list {
   list-style: none;
@@ -365,11 +380,6 @@ input:hover {
 
 /*sign up button* -------------------*/
 
-.signUpButton {
-  position: absolute;
-  left: 95%;
-  bottom: 95.5%;
-}
 
 .cancelApplication {
   margin-top: 10px;
