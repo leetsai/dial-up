@@ -47,10 +47,16 @@ angular.module('App.ideaBtn', [])
         }
       }
       // Allows directive to track filter value that is passed using getIdea()
-      var menu = document.getElementById('filterMenu');
-      menu.addEventListener('change', function(e) {
-        $scope.filter = e.target.value;
-      })
+      // var menu = document.getElementById('filterMenu');
+      // menu.addEventListener('change', function(e) {
+      //   $scope.filter = e.target.value;
+      // })
+      var sidebarItems = document.getElementsByClassName('sidebar-list-item');
+      for (var i = 0; i < sidebarItems.length; i++) {
+        sidebarItems[i].addEventListener('click', function(e) {
+          $scope.filter = e.target.text;
+        })
+      }
     }
   }
 

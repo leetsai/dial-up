@@ -67,9 +67,9 @@ html, body {
 .navbar > div {
   float: right;
 }
-.navbar > div:first-child {
+/*.navbar > div:first-child {
   float: left;
-}
+}*/
 .footer {
   z-index: 10000;
   position: fixed;
@@ -188,9 +188,13 @@ a {
   padding: 5px 30px;
   width: 100px;
   opacity: 0.85;
+  cursor: pointer;
 }
 .sidebar-list-item:hover {
   background-color: #2c3e50;
+}
+a.target {
+  background-color: #4a6580;
 }
 .btnList {
   width: 275px;
@@ -209,32 +213,6 @@ a {
 .suggestion-description {
 
 }
-/* Select options */
-/*@keyframes spinIn {
-  0% {
-    transform: translateY(200%);
-  }
-  60% {
-    transform: translateY(-50%);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-@keyframes spinOut {
-  0% {
-    transform: translateY(0%);
-  }
-  50% {
-    transform: translateY(-200%);
-  }
-  100% {
-    transform: translateY(-200%);
-  }
-}
-.test {
-  animation: spinOut 0.3s ease-in;
-}*/
 /* Button List */
 .get-idea-btn {
 	width:250px;
