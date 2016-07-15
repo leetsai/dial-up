@@ -1,6 +1,7 @@
 angular.module('App',
 [
   'App.navbar',
+  'App.sidebar',
   'App.footer',
   'App.eventList',
   'App.ideaCtrl',
@@ -9,6 +10,7 @@ angular.module('App',
   'App.gifService',
   'App.listCtrl',
   // 'App.signUpCtrl',
+  'App.sidebarCtrl',
   'ngAnimate',
   'ui.router'
 ])
