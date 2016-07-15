@@ -10,8 +10,6 @@ angular.module('App.ideaBtn', [])
           $scope.data = idea.data;
           $scope.idea = idea.data.display;
           $scope.moreInfo = true;
-          $scope.sideBtns = true;
-          // $scope.eventList = false;
           $scope.changeClass();
           $scope.button = "Next";
           $scope.yelpResults = '';
