@@ -1,14 +1,12 @@
-<div id="mySidebar" class="sidebar">
+<div id="mySidebar" class="sidebar" ng-controller="SidebarController">
   <div class="menu-link">
-    <a href="#" ng-controller="SidebarController" ng-click="showSidebar()">☰ Menu</a>
+    <a href="#" ng-click="showSidebar()">☰ Menu</a>
   </div>
   <!-- <span onclick="showSidebar()"></span> -->
   <!-- <span onclick="hideSidebar()"></span> -->
   <ul class="sidebar-list">
-    <li class="sidebar-list-item">Random!</li>
-    <li class="sidebar-list-item">Little Gifts</li>
-    <li class="sidebar-list-item">Fun Activities</li>
-    <li class="sidebar-list-item">Quick Trips</li>
-    <li class="sidebar-list-item">What to Eat</li>
+    <a href="" ng-repeat="filter in filters" ng-click="setActive(filter)"
+       ng-class="{target: filter === activeFilter}"
+       class="sidebar-list-item">{{ filter }}</a>
   </ul>
 </div>

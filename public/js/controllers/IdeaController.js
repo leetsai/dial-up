@@ -4,7 +4,7 @@ angular.module('App.ideaCtrl', [])
   // Default data on page load - changes occur in Buttons directive
   $scope.idea = "In Need of Some Spontaneity?";
   $scope.button = "Get Some!";
-  $scope.filter = document.getElementById('filterMenu').value;
+  $scope.filter = 'Random!';
   // These 4 dictate whether more information can be shown
   $scope.class = 'noInfo';
   $scope.moreInfo = false;
