@@ -39,7 +39,6 @@ angular.module('App.ideaBtn', [])
               $('.listWrapper').animate({opacity: "1"}, 300);
               $('.get-idea-btn').show();
             });
-
           });
           Ideas.getWiki($scope.data.wikiSearch)
           .then(function(resp) {

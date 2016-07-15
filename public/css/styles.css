@@ -14,8 +14,8 @@ html, body {
 .container {
   margin: 0 auto;
   margin-bottom: 60px;
-  margin-left: 250px;
-  margin-right: 250px;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 .centerMessage {
   background-color: white;
