@@ -1,12 +1,3 @@
-<!--
-<div class="sidebar" idea-list>
-<div class="btnList">
-<button idea-button class="backBtn" ng-click="goBack()">Back</button>
-</div>
-</div> -->
-<!-- ng-if="eventList" ng-controller="ListController"-->
-
-<img class="spinner" src='/loading_gif/rainbow.gif'>
 <div class="listWrapper" ng-if="eventList">
 
   <a href="{{ wikiResults.link }}" target="_blank">
@@ -26,22 +17,7 @@
           <span >Rating: {{ result.rating }}</span>
           <img src="{{ result.rating_image }}" class="yelpstars">
         </div>
-
       </div>
     </a>
   </div>
 </div>
-
-
-
-<!--
-  <div class="list-item">
-    <span class="event name">Event name</span>
-    <span class="event description">Event description</span>
-    <span class="event cost">Event cost/rating</span>
-  </div>
-  <div class="list-item">
-    <span class="event name">Event name</span>
-    <span class="event description">Event description</span>
-    <span class="event cost">Event cost/rating</span>
-  </div> -->

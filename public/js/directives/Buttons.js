@@ -44,10 +44,6 @@ angular.module('App.ideaBtn', [])
           });
           $('.get-idea-btn').hide();
           DisplayGif.startGif();
-
-
-          // $state.go('list', {id:$scope.idea});
-          // console.log('Needs to populate list');
         }
       }
       // Allows directive to track filter value that is passed using getIdea()
