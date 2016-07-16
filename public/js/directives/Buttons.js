@@ -1,20 +1,19 @@
 angular.module('App.ideaBtn', [])
 
-.directive('ideaButton', ['Ideas', '$state', 'DisplayGif', function(Ideas, $state, DisplayGif) {
+.directive('ideaButton', ['Ideas', '$state', 'DisplayGif', 'SuggestionFactory', function(Ideas, $state, DisplayGif, SuggestionFactory) {
   return {
     link: function($scope, e, attr) {
       // Gets idea and flags controller for more info to show
       $scope.getIdea = function() {
-        Ideas.getIdea($scope.filter)
-        .then(function(idea) {
-          $scope.data = idea.data;
-          $scope.idea = idea.data.display;
+        $scope.generateRandomIdea($scope.filter, function(idea) {
+          $scope.data = idea;
+          $scope.idea = idea.display;
           $scope.moreInfo = true;
           $scope.changeClass();
           $scope.button = "Next";
           $scope.yelpResults = '';
           $scope.wikiResults = '';
-        });
+        })
       }
       // Gives the Idea display the ability to be clicked
       $scope.changeClass = function() {
