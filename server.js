@@ -48,20 +48,20 @@ app.post('/submitForm', function(req, res, next) {
 });
 
 // getIdea - responds to user clicking "GO button" from UI
-app.post('/api/getIdea', function(req, res, next) {
-  var body = '';
-  req.on('data', function(chunk) {
-    body += chunk;
-  })
-  req.on('end', function() {
-    var category = JSON.parse(body).category;
-    helpers.getIdeaList(function(data) {
-      helpers.generateRandomIdea(data, category, function(result) {
-        res.send(result);
-      })
-    })
-  });
-});
+// app.post('/api/getIdea', function(req, res, next) {
+//   var body = '';
+//   req.on('data', function(chunk) {
+//     body += chunk;
+//   })
+//   req.on('end', function() {
+//     var category = JSON.parse(body).category;
+//     helpers.getIdeaList(function(data) {
+//       helpers.generateRandomIdea(data, category, function(result) {
+//         res.send(result);
+//       })
+//     })
+//   });
+// });
 
 
 // app.post('/api/suggestionDetails', function(req, res, next) {

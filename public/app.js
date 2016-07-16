@@ -10,6 +10,7 @@ angular.module('App',
   'App.ideaBtn',
   'App.listCtrl',
   'App.signUpCtrl',
+  'App.suggestionService',
   'App.sidebarCtrl',
   'ngAnimate',
   'ui.router'

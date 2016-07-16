@@ -6,17 +6,17 @@ angular.module('App.ideaService', [])
     data: null
   };
 
-  var getIdea = function(filter) {
-    return $http({
-      method: 'POST',
-      url:'/api/getIdea',
-      data: {category:filter}
-    })
-    .then(function(resp) {
-      currentIdea.data = resp.data;
-      return resp;
-    })
-  }
+  // var getIdea = function(filter) {
+  //   return $http({
+  //     method: 'POST',
+  //     url:'/api/getIdea',
+  //     data: {category:filter}
+  //   })
+  //   .then(function(resp) {
+  //     currentIdea.data = resp.data;
+  //     return resp;
+  //   })
+  // }
   var getYelp = function(suggestion) { // include location, resultCount
     return $http({
       method: 'POST',
@@ -45,7 +45,7 @@ angular.module('App.ideaService', [])
 
   return {
     currentIdea: currentIdea,
-    getIdea: getIdea,
+    // getIdea: getIdea,
     getYelp: getYelp,
     getWiki: getWiki
   }
