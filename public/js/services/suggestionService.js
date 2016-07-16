@@ -239,10 +239,6 @@ angular.module('App.suggestionService', [])
 
   return {
     suggestionList : suggestionList
-  }
+  };
 
-})
-
-
-
-
+});

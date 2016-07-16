@@ -4,5 +4,5 @@ angular.module('App.sidebar', [])
   return {
     restrict: 'EA',
     templateUrl: 'views/sidebar.html',
-  }
-}])
+  };
+}]);

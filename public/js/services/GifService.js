@@ -13,4 +13,4 @@ angular.module('App.gifService', [])
     startGif: startGif,
     endGif: endGif
   };
-})
+});

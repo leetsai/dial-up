@@ -31,8 +31,7 @@
 }
 html, body {
   margin: 0;
-  /*background-image: url("http://www.pretty-streets.com/portal/img_external/layer/bg-heading-dark.jpg");*/
-  background: url('./walls.jpg') no-repeat center center fixed;
+  background: url('../css/walls.jpg') no-repeat center center fixed;
   -webkit-background-size: cover; /* Chrome */
   -moz-background-size: cover; /* Firefox */
   -o-background-size: cover; /* Opera */
@@ -197,18 +196,6 @@ a {
 }
 
 /*====================*/
-/* Unhide to see a sidebar panel */
-/*.sidebar {
-  position: absolute;
-  height: 100%;
-  width: 15%;
-  top: 0;
-  bottom: 0;
-  text-align: left;
-  color: #fff;
-  background-color: #3c4b5b;
-  opacity: .9;
-}*/
 #filter-menu {
   width: 200px;
 }
@@ -293,22 +280,6 @@ a.target {
 .get-idea-btn:active {
   top:3px;
   box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #07526e, 0px 5px 3px #656565;
-}
-.ideaBtnNext {
-  background-color: red !important;
-}
-.backBtn {
-  width: 100px;
-  height: 100px;
-  background: linear-gradient(45deg, #70db70 50%, #70db70 50%, #83e883 50% );
-  margin: 10px 0 10px 0;
-  border: 1px solid #868686;
-}
-.dislike {
-  background-color: red;
-}
-.like {
-  background-color: green;
 }
 .button {
   text-align: center;

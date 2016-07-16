@@ -15,4 +15,4 @@ angular.module('App.ideaCtrl', [])
   $scope.suggestionList = SuggestionFactory.suggestionList;
 
 
-}])
+}]);

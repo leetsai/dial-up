@@ -17,8 +17,8 @@ angular.module('App.ideaService', [])
     })
     .then(function(resp) {
       return resp;
-    })
-  }
+    });
+  };
 
   var getWiki = function(suggestion) {
     return $http({
@@ -28,13 +28,13 @@ angular.module('App.ideaService', [])
     })
     .then(function(resp) {
       return resp;
-    })
-  }
+    });
+  };
 
   return {
     currentIdea: currentIdea,
     // getIdea: getIdea,
     getYelp: getYelp,
     getWiki: getWiki
-  }
-}])
+  };
+}]);
