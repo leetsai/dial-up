@@ -11,12 +11,12 @@ angular.module('App',
   'App.listCtrl',
   'App.signUpCtrl',
   'App.suggestionService',
-  'App.sidebarCtrl',
+  'App.filterCtrl',
   'ngAnimate',
   'ui.router'
 ])
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/getidea');
   $stateProvider
   .state('home', {
@@ -24,11 +24,10 @@ angular.module('App',
     templateUrl: 'views/main.html',
     controller: 'IdeaController'
   })
-  // routing for old view swap - not to be used with new look
-    .state('home.list', {
-      url: '/{searchTerm}',
-      templateUrl: 'views/list.html',
-      controller: 'ListController'
-    })
+  .state('home.list', {
+    url: '/{searchTerm}',
+    templateUrl: 'views/list.html',
+    controller: 'ListController'
+  })
 
-})
+}])

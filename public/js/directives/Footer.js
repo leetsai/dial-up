@@ -4,5 +4,5 @@ angular.module('App.footer', [])
   return {
     restrict: 'E',
     templateUrl: 'views/footer.html'
-  }
-}])
+  };
+}]);
