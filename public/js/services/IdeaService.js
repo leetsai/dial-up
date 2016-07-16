@@ -5,24 +5,12 @@ angular.module('App.ideaService', [])
   var currentIdea = {
     data: null
   };
-
-  // var getIdea = function(filter) {
-  //   return $http({
-  //     method: 'POST',
-  //     url:'/api/getIdea',
-  //     data: {category:filter}
-  //   })
-  //   .then(function(resp) {
-  //     currentIdea.data = resp.data;
-  //     return resp;
-  //   })
-  // }
   var getYelp = function(suggestion) { // include location, resultCount
     return $http({
       method: 'POST',
       url: '/api/yelpDetails',
       data: {
-        suggestion: suggestion //, 
+        suggestion: suggestion //,
         // location: location,
         // resultCount: resultCount
       }

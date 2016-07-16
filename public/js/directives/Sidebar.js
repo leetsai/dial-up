@@ -2,7 +2,7 @@ angular.module('App.sidebar', [])
 
 .directive('sidepanel', ['Ideas', '$state', function(Ideas, $state) {
   return {
-    restrict: 'E',
+    restrict: 'EA',
     templateUrl: 'views/sidebar.html',
   }
 }])

@@ -11,7 +11,7 @@ angular.module('App',
   'App.listCtrl',
   'App.signUpCtrl',
   'App.suggestionService',
-  'App.sidebarCtrl',
+  'App.filterCtrl',
   'ngAnimate',
   'ui.router'
 ])

@@ -1,6 +1,6 @@
-angular.module('App.sidebarCtrl', [])
+angular.module('App.filterCtrl', [])
 
-.controller('SidebarController', ['$scope', function($scope) {
+.controller('FilterController', ['$scope', function($scope) {
   // sidebar menu button
   $scope.sidebarBtn = "☰ Menu";
   $scope.filters = ['Random!',
