@@ -36,6 +36,17 @@ app.get('/', function(req, res) {
 //   res.send({categories: ['gifts', 'activities', 'trips', 'food']})
 // });
 
+// user sign-up: POST request
+app.post('/submitForm', function(req, res, next) {
+  var userInformation = JSON.parse(Object.keys(req.body)[0]);
+  var data = userInformation.username + ' ' + userInformation.email;
+  fs.appendFile('server/account.txt', data, 'utf8', function(err) {
+    if (err) {
+      console.log(err + ': cannot save to file.');
+    }
+  });
+});
+
 // getIdea - responds to user clicking "GO button" from UI
 app.post('/api/getIdea', function(req, res, next) {
   var body = '';
