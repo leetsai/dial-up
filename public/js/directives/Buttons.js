@@ -23,7 +23,7 @@ angular.module('App.ideaBtn', [])
       }
       // Will populate with API data, using dummy data now
       $scope.getList = function(e) {
-        if ($scope.class !== "noInfo") {
+        if ($scope.moreInfo) {
           $scope.eventList = true;
           $scope.moreInfo = false; // The moreInfo area should not be clickable after clicked
 
@@ -46,7 +46,6 @@ angular.module('App.ideaBtn', [])
         }
         else {
           $scope.dropdown = false;
-          $scope.moreInfo = true;
           $scope.eventList = false;
           $('.get-idea-btn').show();
           $('.listWrapper').css("opacity", "0").hide();
