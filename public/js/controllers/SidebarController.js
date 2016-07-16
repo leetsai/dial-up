@@ -12,6 +12,12 @@ angular.module('App.sidebarCtrl', [])
   $scope.activeFilter = 'Random!';
   $scope.setActive = function(filter) {
     $scope.activeFilter = filter;
+  };
+
+  $scope.menuState = false;
+
+  $scope.toggleMenu = function() {
+    $scope.menuState = !$scope.menuState;
   }
   // when ☰ Menu is clicked, showSidebar gets fired; click again and hideSidebar will fire
   // $scope.showSidebar = showSidebar();
