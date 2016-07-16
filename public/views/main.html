@@ -1,14 +1,14 @@
 <div class="wrapper collapsed" idea-button>
-  <div class="message-toggle" ng-class="class">
-    <a ui-sref=".list({searchTerm: data.yelpSearch})">
-      <div class="centerMessage"  ng-click="getList()">
+  <div class="message-toggle" ng-class="class" ng-click="getList()" ui-sref=".list({searchTerm: data.yelpSearch})">
+      <div class="centerMessage">
         <span class="centerMessageText" model="{{ idea }}" animate-idea>{{ idea }}</span>
       </div>
-    </a>
     <div id="expander">
       <div id="circle">
         <div class="half-height"></div>
-        <div id="text" class="half-height">&#9660;</div>
+        <div id="text" class="half-height"
+        ng-class="{'toggle-down': !dropdown, 'toggle-up': dropdown}">
+      </div>
       </div>
     </div>
   </div>

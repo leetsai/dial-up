@@ -9,4 +9,5 @@ angular.module('App.ideaCtrl', [])
   $scope.class = 'noInfo';
   $scope.moreInfo = false;
   $scope.eventList = false;
+  $scope.dropdown = false;
 }])

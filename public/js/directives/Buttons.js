@@ -32,10 +32,10 @@ angular.module('App.ideaBtn', [])
           .then(function(resp) {
             $scope.yelpResults = resp.data;
             DisplayGif.endGif();
+            $scope.dropdown = true;
             $('.listWrapper').css("opacity", "0").show();
             $('.listWrapper ').animate({'max-height': "1000px"}, 300, 'linear', function () {
               $('.listWrapper').animate({opacity: "1"}, 300);
-              $('.get-idea-btn').show();
             });
           });
           Ideas.getWiki($scope.data.wikiSearch)
@@ -44,6 +44,13 @@ angular.module('App.ideaBtn', [])
           });
           $('.get-idea-btn').hide();
           DisplayGif.startGif();
+        }
+        else {
+          $scope.dropdown = false;
+          $scope.moreInfo = true;
+          $scope.eventList = false;
+          $('.get-idea-btn').show();
+          $('.listWrapper').css("opacity", "0").hide();
         }
       }
       // Allows directive to track filter value that is passed using getIdea()

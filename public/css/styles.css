@@ -2,12 +2,6 @@
     outline: none;
 }
 
-.wrapper.collapsed .dropdownToggle::before {
-  content: "\25BC";
-}
-.wrapper.expanded .dropdownToggle::before {
-  content: "\25B2";
-}
 #expander {
   display: none;
   margin: 0 auto;
@@ -75,6 +69,12 @@ html, body {
 }
 .getInfo > #expander {
   display: inherit;
+}
+.toggle-down:before {
+  content: "\25BC";
+}
+.toggle-up:before {
+  content: "\25B2";
 }
 /*.getInfo:active {
   font-size: 38px;
