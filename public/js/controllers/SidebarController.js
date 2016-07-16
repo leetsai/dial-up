@@ -20,13 +20,13 @@ angular.module('App.sidebarCtrl', [])
   $scope.showSidebar = function() {
     if (toggle) {
       toggle = false;
-      $('.menu').text('☰ Close Menu');
-      $('.list').slideDown();
-      
+      $('.menu').text('☰ Close');
+      $('.list').slideDown(200);
+
     } else {
       toggle = true;
       $('.menu').text('☰ Menu');
-      $('.list').slideUp();
+      $('.list').slideUp(200);
     }
   }
   // $scope.hideSidebar = hideSidebar();

@@ -1,9 +1,7 @@
 <div id="mySidebar" class="sidebar" ng-controller="SidebarController">
-  <div class="menu-link">
-    <a class="menu" href="#" ng-click="showSidebar()">☰ Menu</a>
+  <div class="menu-link" ng-click="showSidebar()">
+    <a class="menu" href="#">☰ Menu</a>
   </div>
-  <!-- <span onclick="showSidebar()"></span> -->
-  <!-- <span onclick="hideSidebar()"></span> -->
   <div class="list">
     <ul class="sidebar-list">
       <a href="" ng-repeat="filter in filters" ng-click="setActive(filter)"
