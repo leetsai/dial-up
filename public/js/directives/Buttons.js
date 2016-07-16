@@ -23,7 +23,7 @@ angular.module('App.ideaBtn', [])
       }
       // Will populate with API data, using dummy data now
       $scope.getList = function(e) {
-        if ($scope.moreInfo) {
+        if ($scope.class !== "noInfo") {
           $scope.eventList = true;
           $scope.moreInfo = false; // The moreInfo area should not be clickable after clicked
 
@@ -52,6 +52,36 @@ angular.module('App.ideaBtn', [])
           $('.listWrapper').css("opacity", "0").hide();
         }
       }
+      $scope.generateRandomIdea = function (category, callback) {
+        if (category === 'Random!') {
+          if (Object.keys($scope.suggestionList).length === 0) {
+            callback({display: "Suggestion List Exhausted", yelpSearch: "", wikiSearch: "Decision-making"})
+            $scope.class = 'noInfo';
+            $scope.moreInfo = false;
+            $scope.eventList = false;
+            $scope.dropdown = false;
+            return;
+          };
+          var categories = Object.keys($scope.suggestionList);
+          var category = categories[Math.floor(Math.random() * Object.keys($scope.suggestionList).length)];
+        }
+        if ($scope.suggestionList[category] === undefined) {
+          callback({display: "No more suggestions in this category", yelpSearch: "", wikiSearch: "Decision-making"})
+          $scope.class = 'noInfo';
+          $scope.moreInfo = false;
+          $scope.eventList = false;
+          $scope.dropdown = false;
+        } else {
+          var random = Math.floor(Math.random() * $scope.suggestionList[category].length);
+          var suggestion = $scope.suggestionList[category][random];
+          $scope.suggestionList[category].splice(random, 1);
+          if ($scope.suggestionList[category].length === 0) {
+            delete $scope.suggestionList[category];
+          }
+          callback(suggestion);
+        }
+      }
+
       // Allows directive to track filter value that is passed using getIdea()
       // var menu = document.getElementById('filterMenu');
       // menu.addEventListener('change', function(e) {
