@@ -13,26 +13,5 @@ angular.module('App.ideaCtrl', [])
 
   $scope.suggestionList = SuggestionFactory.suggestionList;
 
-  $scope.generateRandomIdea = function (category, callback) {
-    if (category === 'Random!') {
-      if (Object.keys($scope.suggestionList).length === 0) {
-        callback({display: "Suggestion List Exhausted", yelpSearch: "", wikiSearch: "Decision-making"})
-        return;
-      };
-      var categories = Object.keys($scope.suggestionList);
-      var category = categories[Math.floor(Math.random() * Object.keys($scope.suggestionList).length)];
-    }
-    if ($scope.suggestionList[category] === undefined) {
-      callback({display: "No more suggestions in this category", yelpSearch: "", wikiSearch: "Decision-making"})
-    } else {
-      var random = Math.floor(Math.random() * $scope.suggestionList[category].length);
-      var suggestion = $scope.suggestionList[category][random];
-      $scope.suggestionList[category].splice(random, 1);
-      if ($scope.suggestionList[category].length === 0) {
-        delete $scope.suggestionList[category];
-      }
-      callback(suggestion);
-    }
-  }
 
 }])
