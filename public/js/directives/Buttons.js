@@ -9,6 +9,7 @@ angular.module('App.ideaBtn', [])
           $scope.data = idea;
           $scope.idea = idea.display;
           $scope.moreInfo = true;
+          $scope.hasSuggestions = true;
           $scope.changeClass();
           $scope.button = "Next";
           $scope.yelpResults = '';
@@ -23,7 +24,7 @@ angular.module('App.ideaBtn', [])
       }
       // Will populate with API data, using dummy data now
       $scope.getList = function(e) {
-        if ($scope.moreInfo) {
+        if ($scope.moreInfo && $scope.hasSuggestions) {
           $scope.eventList = true;
           $scope.moreInfo = false; // The moreInfo area should not be clickable after clicked
 
@@ -47,6 +48,7 @@ angular.module('App.ideaBtn', [])
         else {
           $scope.dropdown = false;
           $scope.eventList = false;
+          $scope.moreInfo = true;
           $('.get-idea-btn').show();
           $('.listWrapper').css("opacity", "0").hide();
         }
@@ -57,6 +59,7 @@ angular.module('App.ideaBtn', [])
             callback({display: "Suggestion List Exhausted", yelpSearch: "", wikiSearch: "Decision-making"})
             $scope.class = 'noInfo';
             $scope.moreInfo = false;
+            $scope.hasSuggestions = false;
             $scope.eventList = false;
             $scope.dropdown = false;
             return;
@@ -68,6 +71,7 @@ angular.module('App.ideaBtn', [])
           callback({display: "No more suggestions in this category", yelpSearch: "", wikiSearch: "Decision-making"})
           $scope.class = 'noInfo';
           $scope.moreInfo = false;
+          $scope.hasSuggestions = false;
           $scope.eventList = false;
           $scope.dropdown = false;
         } else {

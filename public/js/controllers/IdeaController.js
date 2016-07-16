@@ -10,6 +10,7 @@ angular.module('App.ideaCtrl', [])
   $scope.moreInfo = false;
   $scope.eventList = false;
   $scope.dropdown = false;
+  $scope.hasSuggestions = true;
 
   $scope.suggestionList = SuggestionFactory.suggestionList;
 
