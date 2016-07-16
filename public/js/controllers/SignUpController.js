@@ -30,6 +30,7 @@ angular.module('App.signUpCtrl', [])
   $scope.username = '';
   $scope.email = '';
 
+  //if submit button is clicked send credentials to
   $scope.getCredentials = function(username, email) {
     console.log('this is coming in here', username, email);
     SignUp.submitSignUp(username, email);
