@@ -1,6 +1,34 @@
 *:focus {
     outline: none;
 }
+
+#expander {
+  display: none;
+  margin: 0 auto;
+  height: 35px;
+  width: 70px;
+  overflow: hidden;
+}
+
+.half-height {
+  height: 35px;
+}
+
+#text {
+  line-height: 35px;
+  text-align: center;
+  color: #3e4b5a;
+  font-size: 24px;
+}
+
+#circle {
+  height: 70px;
+  position: relative;
+  top: -100%;
+  width: 70px;
+  border-radius: 100%;
+  background-color: white;
+}
 html, body {
   margin: 0;
   /*background-image: url("http://www.pretty-streets.com/portal/img_external/layer/bg-heading-dark.jpg");*/
@@ -17,15 +45,19 @@ html, body {
   margin-left: 200px;
   margin-right: 200px;
 }
+.message-toggle {
+  margin-bottom: 35px;
+  opacity: .9;
+  cursor: pointer;
+  min-height: 115px;
+}
 .centerMessage {
   background-color: white;
   padding: 10px;
   margin: 0 auto;
-  margin-bottom: 40px;
   overflow: hidden;
   line-height: 60px;
   font-size: 40px;
-  opacity: .9;
 }
 .centerMessageText {
   display: block;
@@ -33,14 +65,21 @@ html, body {
   text-transform:uppercase;
 }
 .getInfo:hover {
-  background-color: white;
   opacity: 1;
-  cursor: pointer
 }
-.getInfo:active {
+.getInfo > #expander {
+  display: inherit;
+}
+.toggle-down:before {
+  content: "\25BC";
+}
+.toggle-up:before {
+  content: "\25B2";
+}
+/*.getInfo:active {
   font-size: 38px;
   box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.5);
-}
+}*/
 .noInfo {
 }
 
