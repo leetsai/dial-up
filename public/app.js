@@ -9,7 +9,7 @@ angular.module('App',
   'App.ideaService',
   'App.ideaBtn',
   'App.listCtrl',
-  // 'App.signUpCtrl',
+  'App.signUpCtrl',
   'App.sidebarCtrl',
   'ngAnimate',
   'ui.router'
