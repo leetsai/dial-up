@@ -27,11 +27,13 @@ angular.module('App.ideaBtn', [])
         if ($scope.moreInfo && $scope.hasSuggestions) {
           $scope.eventList = true;
           $scope.moreInfo = false; // The moreInfo area should not be clickable after clicked
+          $scope.timeout = true;
 
           Ideas.getYelp($scope.data.yelpSearch)
           .then(function(resp) {
             $scope.yelpResults = resp.data;
             DisplayGif.endGif();
+            $scope.timeout = false;
             $scope.dropdown = true;
             $('.listWrapper').css("opacity", "0").show();
             $('.listWrapper ').animate({'max-height': "1000px"}, 300, 'linear', function () {

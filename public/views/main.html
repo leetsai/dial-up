@@ -1,5 +1,5 @@
 <div class="wrapper collapsed" idea-button>
-  <div class="message-toggle" ng-class="class" ng-click="getList()" ui-sref=".list({searchTerm: data.yelpSearch})">
+  <div class="message-toggle" ng-class="class" ng-click="!timeout && getList()" ui-sref=".list({searchTerm: data.yelpSearch})">
       <div class="centerMessage">
         <span class="centerMessageText" model="{{ idea }}" animate-idea>{{ idea }}</span>
       </div>
