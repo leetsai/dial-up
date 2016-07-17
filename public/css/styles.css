@@ -223,6 +223,11 @@ a {
   padding: 0;
   margin: 0;
 }
+
+.hide {
+  display: none;
+}
+
 .sidebar-list-item {
   display: block;
   background-color: #34495e;
