@@ -13,6 +13,7 @@ angular.module('App.filterCtrl', [])
   $scope.setActive = function(filter) {
     $scope.activeFilter = filter;
   };
+
   // when ☰ Menu is clicked, showSidebar gets fired; click again and hideSidebar will fire
   // $scope.showSidebar = showSidebar();
   var toggle = true;
