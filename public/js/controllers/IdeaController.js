@@ -8,7 +8,6 @@ angular.module('App.ideaCtrl', [])
   $scope.getLocation = function(loc) {
     if (parseInt(loc)) {
     Ideas.location.data = $scope.location;
-    // $('.footer-location').html('Current zipcode: ' + Ideas.location.data);
     $state.go('home');
     }
   }

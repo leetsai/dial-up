@@ -44,8 +44,7 @@ angular.module('App',
 
 }])
 
-.run(['Ideas', '$state', function (Ideas, $state) {
-  if (Ideas.location.data === null) {
-    $state.go('landing');
-  }
+.run(['$location', '$state', function ($location, $state) {
+  $location.url('/');
+  $state.go('landing');
 }]);
