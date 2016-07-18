@@ -109,7 +109,7 @@ angular.module('App.suggestionService', [])
     ],
     "Quick Trips": [
       { display: "Escape... go camping!",
-        yelpSearch: "Camping",
+        yelpSearch: "campgrounds",
         wikiSearch: "Camping"
       },
       { display: "Vino anyone?",
@@ -140,9 +140,9 @@ angular.module('App.suggestionService', [])
         yelpSearch: "beach",
         wikiSearch: "beach"
       },
-      { display: "Skydiving!",
-        yelpSearch: "skydiving",
-        wikiSearch: "parachuting"
+      { display: "Extreme sports!",
+        yelpSearch: "extreme sports",
+        wikiSearch: "extreme sport"
       },
       { display: "Go Whale watching",
         yelpSearch: "Whale Watching",
@@ -216,7 +216,7 @@ angular.module('App.suggestionService', [])
       },
       { display: "Afternoon tea",
         yelpSearch: "afternoon tea",
-        wikiSearch: "afternoon tea"
+        wikiSearch: "Tea_(meal)"
       },
       { display: "Dim sum",
         yelpSearch: "dim sum",
