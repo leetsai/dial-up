@@ -6,7 +6,7 @@ angular.module('App.ideaService', [])
     data: null
   };
   var location = {
-    data: null
+    data: null,
   }
   var getYelp = function(suggestion) { // include location, resultCount
     return $http({

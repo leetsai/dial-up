@@ -1,3 +1,7 @@
-<footer class="footer">
-  <span>Created by DIAL-Up</span>
+<footer class="footer" ng-controller="FooterController">
+  <div ng-if="activeLocation.data">
+    <span class="footer-message">{{ message }}</span>
+    <span class="footer-location" ng-bind="activeLocation.data"></span>
+  </div>
+  <span class="footer-created">Created by DIAL-Up</span>
 </footer>
