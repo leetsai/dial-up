@@ -7,7 +7,7 @@ angular.module('App.ideaCtrl', [])
   $scope.filter = 'Random!';
   $scope.getLocation = function(loc) {
     if (parseInt(loc)) {
-    Ideas.location.data = $scope.location;
+    Ideas.queryData.location = $scope.location;
     $state.go('home');
     }
   }

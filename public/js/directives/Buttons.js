@@ -35,8 +35,9 @@ angular.module('App.ideaBtn', [])
             DisplayGif.endGif();
             $scope.timeout = false;
             $scope.dropdown = true;
+            var maxHeight = ((Ideas.queryData.count) * 200);
             $('.listWrapper').css("opacity", "0").show();
-            $('.listWrapper ').animate({'max-height': "1000px"}, 300, 'linear', function () {
+            $('.listWrapper ').animate({'max-height': maxHeight+'px'}, 300, 'linear', function () {
               $('.listWrapper').animate({opacity: "1"}, 300);
             });
           });
@@ -92,6 +93,9 @@ angular.module('App.ideaBtn', [])
           $scope.filter = e.target.text;
         });
       }
+      document.getElementById('result-count').addEventListener('change', function(e) {
+        Ideas.queryData.count = e.target.value;
+      });
     }
   };
 

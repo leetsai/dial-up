@@ -5,8 +5,9 @@ angular.module('App.ideaService', [])
   var currentIdea = {
     data: null
   };
-  var location = {
-    data: null,
+  var queryData = {
+    location: null,
+    count: 5
   }
   var getYelp = function(suggestion) { // include location, resultCount
     return $http({
@@ -14,8 +15,8 @@ angular.module('App.ideaService', [])
       url: '/api/yelpDetails',
       data: {
         suggestion: suggestion,
-        location: location.data || 'San Francisco'
-        // resultCount: resultCount
+        location: queryData.location || 'San Francisco',
+        resultCount: queryData.count || 5
       }
     })
     .then(function(resp) {
@@ -35,7 +36,7 @@ angular.module('App.ideaService', [])
   };
 
   return {
-    location: location,
+    queryData: queryData,
     currentIdea: currentIdea,
     // getIdea: getIdea,
     getYelp: getYelp,

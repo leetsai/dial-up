@@ -114,6 +114,15 @@ box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.5);
   border-left: 1px solid #636363;
   border-right: 1px solid #636363;
 }
+.navbar-count {
+  display: flex;
+}
+#result-count {
+  margin: 0px 10px 0px 0px;
+}
+.result-count-message {
+  color: white;
+}
 /*.navbar > div:first-child {
 float: left;
 }*/
@@ -460,6 +469,7 @@ input:hover {
   border-top-width: 2px;
   margin-top: 20px;
   padding: 10px;
+  color: #3e4b5a;
 }
 .location-submit {
   margin: auto;
