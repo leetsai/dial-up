@@ -35,7 +35,7 @@ html {
   -moz-background-size: cover; /* Firefox */
   -o-background-size: cover; /* Opera */
   background-size: cover;
-  font-family: "Optima",Helvetica,Arial,sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 body {
   margin: 0;
@@ -314,7 +314,7 @@ a.target {
   width:150px;
   height:150px;
   display:inline-block;
-  font-family:Arial, "Helvetica", sans-serif;
+  font-family:'Open Sans', Arial, "Helvetica", sans-serif;
   font-size:30px;
   font-weight:bold;
   color:#fff;
@@ -486,7 +486,7 @@ input:hover {
   font-size: 50px;
 }
 .location-msg {
-  font-size: 18px;
+  font-size: 24px;
 }
 .location-form > input {
   border: none;
