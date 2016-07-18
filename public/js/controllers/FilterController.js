@@ -13,6 +13,13 @@ angular.module('App.filterCtrl', [])
   $scope.setActive = function(filter) {
     $scope.activeFilter = filter;
   };
+
+  $scope.menuState = true;
+  console.log($scope.menuState);
+  $scope.toggleMenu = function() {
+    console.log('menuState change. Now: ', $scope.menuState);
+    $scope.menuState = !$scope.menuState;
+  }
   // when ☰ Menu is clicked, showSidebar gets fired; click again and hideSidebar will fire
   // $scope.showSidebar = showSidebar();
   var toggle = true;
