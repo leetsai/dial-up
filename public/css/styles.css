@@ -389,6 +389,10 @@ a.target {
   margin-top: 20px;
   padding-bottom: 15px;
 }
+.submit:hover {
+  cursor: pointer;
+  background-color: rgba(238, 131, 89, 0.87);
+}
 
 .signup-input {
   width: 85%;
@@ -401,9 +405,8 @@ a.target {
   padding-left: 15px;
 }
 
-.submit:hover {
-  cursor: pointer;
-  background-color: rgba(238, 131, 89, 0.87);
+.signup-email {
+  width: 300px;
 }
 
 input:hover {
