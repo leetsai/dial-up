@@ -1,38 +1,13 @@
 angular.module('App.signUpCtrl', [])
-//factory: $http post to sign up
-.factory('SignUp', ['$http', function($http) {
-  var submitSignUp = function(username, email) {
-    console.log('coming in here!!', username, email);
-    return $http({
-      method: 'POST',
-      url: '/submitForm',
-      datatype:'JSON',
-      data: {
-        "username": username,
-        "email":email
-      },
-      headers: {'Content-Type' : 'application/X-www-form-urlencoded'},
-    })
-    .then(function(res) {
-      return res;
-    }, function(err) {
-      if (err) {
-        console.log(err);
-      }
-    });
-  };
 
-  return {
-    submitSignUp: submitSignUp
-  };
-}])
-.controller('signUpController', ['$scope', 'SignUp', function($scope, SignUp) {
+.controller('signUpController', ['$scope', 'SignUp', '$state', function($scope, SignUp, $state) {
   $scope.username = '';
   $scope.email = '';
 
   //if submit button is clicked send credentials to
-  $scope.getCredentials = function(username, email) {
-    console.log('this is coming in here', username, email);
-    SignUp.submitSignUp(username, email);
+  $scope.getCredentials = function(email) {
+    console.log('SignupCtrl accessed: submitting: ', email);
+    SignUp.submitSignUp(email);
+    $state.go('home');
   };
 }]);

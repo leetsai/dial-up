@@ -1,5 +1,5 @@
-<div class="navbar">
-  <div id="filter-menu" class="sidebar" ng-controller="FilterController">
+<div class="navbar" ng-controller="FilterController">
+  <div id="filter-menu" class="sidebar">
     <div class="menu-link" ng-click="showSidebar()">
       <a class="menu" href="">☰ Menu</a>
     </div>
@@ -11,7 +11,7 @@
       </ul>
     </div>
   </div>
-  <div class="navbar-item">
+  <div class="navbar-item" ng-click="loadSignup()">
     <button class="signup-btn">Sign Up</button>
   </div>
 </div>
