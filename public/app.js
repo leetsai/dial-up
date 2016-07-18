@@ -5,13 +5,15 @@ angular.module('App',
   'App.footer',
   'App.footerCtrl',
   'App.gifService',
-  'App.eventList',
-  'App.ideaCtrl',
-  'App.ideaService',
   'App.ideaBtn',
+  'App.eventList',
+  'App.gifService',
+  'App.ideaService',
+  'App.suggestionService',
+  'App.signUpService',
+  'App.ideaCtrl',
   'App.listCtrl',
   'App.signUpCtrl',
-  'App.suggestionService',
   'App.filterCtrl',
   'ngAnimate',
   'ui.router'
@@ -30,9 +32,14 @@ angular.module('App',
     templateUrl: 'views/list.html',
     controller: 'ListController'
   })
-  .state('signup', {
+  .state('landing', {
     url: '/',
     templateUrl: 'views/landing.html'
+  })
+  .state('signup', {
+    url: '/signup',
+    templateUrl: 'views/signUp.html',
+    controller: 'signUpController'
   })
 
 }])
