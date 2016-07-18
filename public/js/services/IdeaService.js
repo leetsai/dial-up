@@ -13,8 +13,8 @@ angular.module('App.ideaService', [])
       method: 'POST',
       url: '/api/yelpDetails',
       data: {
-        suggestion: suggestion //,
-        // location: location,
+        suggestion: suggestion,
+        location: location.data || 'San Francisco'
         // resultCount: resultCount
       }
     })

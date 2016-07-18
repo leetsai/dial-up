@@ -1,5 +1,5 @@
 *:focus {
-    outline: none;
+  outline: none;
 }
 
 #expander {
@@ -76,8 +76,8 @@ html, body {
   content: "\25B2";
 }
 /*.getInfo:active {
-  font-size: 38px;
-  box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.5);
+font-size: 38px;
+box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.5);
 }*/
 .noInfo {
 }
@@ -91,7 +91,7 @@ html, body {
   border-radius: 5px;
   min-width: 700px;
   min-height: 304px;
-  background-color: rgba(233, 246, 251, 0.55);
+  background-color: rgba(107, 124, 142, .8);
 }
 
 .navbar {
@@ -112,7 +112,7 @@ html, body {
   border-right: 1px solid #636363;
 }
 /*.navbar > div:first-child {
-  float: left;
+float: left;
 }*/
 .footer {
   z-index: 10000;
@@ -186,7 +186,7 @@ a {
 }
 .event {
   padding: 0 1%;
-/*  margin-left: 10px;
+  /*  margin-left: 10px;
   margin-right: 10px;*/
 }
 
@@ -259,7 +259,7 @@ a.target {
 }
 /* Button List */
 .get-idea-btn {
-	width:250px;
+  width:250px;
   height:125px;
   display:inline-block;
   font-family:Arial, "Helvetica", sans-serif;
@@ -269,23 +269,23 @@ a.target {
   text-decoration:none;
   text-transform:uppercase;
   text-align:center;
-  text-shadow:1px 1px 0px #07526e;
+  text-shadow:1px 1px 0px #7f4229;
   padding-top:6px;
   margin-left:auto;
   margin-right:auto;
   position:relative;
   cursor:pointer;
   border: none;
-  background: #109bce;
+  background: #e07a52;
   border-radius: 5px;
-  box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #07526e, 0px 5px 5px #656565;
+  box-shadow: inset 0px 1px 0px #e07a52, 0px 5px 0px 0px #6d3721, 0px 5px 5px #656565;
 }
 .get-idea-btn:hover {
-  background: #2aa2ce;
+  background: #ec835a;
 }
 .get-idea-btn:active {
   top:3px;
-  box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #07526e, 0px 2.5px 3px #656565;
+  box-shadow: inset 0px 1px 0px #e07a52, 0px 2px 0px 0px #6d3721, 0px 2.5px 3px #656565;
 }
 .button {
   text-align: center;
@@ -377,7 +377,7 @@ a.target {
   padding-bottom: 15px;
 }
 
-input {
+.signup-input {
   width: 85%;
   border-radius: 10px;
   font-size: 25px;
@@ -406,3 +406,51 @@ input:hover {
 /*end sign up button* -------------------*/
 
 /*end of sign in page ----------------------------------------*/
+
+.landing-wrapper {
+  text-align: center;
+  top: 10%;
+  color: white;
+  margin: 0 auto;
+  width: 600px;
+  border-radius: 7px;
+  padding: 40px 0px;
+  margin-top: 40px;
+  background-color: rgba(107, 124, 142, .9);
+}
+.location-text-wrapper {
+  background-color: rgba(233, 246, 251, 0.55);
+  padding: 7px 20px;
+  margin-bottom: 30px;
+  color: #3e4b5a;
+}
+.location-heading {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 50px;
+}
+.location-msg {
+  font-size: 18px;
+}
+.location-form > input {
+  border: none;
+  border-radius: 3px;
+  font-size: 25px;
+  border-top-width: 2px;
+  margin-top: 20px;
+  padding: 10px;
+}
+.location-submit {
+  margin: auto;
+  border-top-width: 2px;
+  margin-top: 20px;
+  background-color: rgba(233, 246, 251, 0.55);
+  color: #3e4b5a;
+}
+.location-submit:hover {
+  cursor: pointer;
+  background-color: rgba(238, 131, 89, 0.87);
+}
+.location-zip {
+  width: 150px;
+}

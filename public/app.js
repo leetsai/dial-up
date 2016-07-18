@@ -17,7 +17,7 @@ angular.module('App',
 ])
 
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/');
   $stateProvider
   .state('home', {
     url: '/getidea',
@@ -30,7 +30,7 @@ angular.module('App',
     controller: 'ListController'
   })
   .state('signup', {
-    url: '/home',
+    url: '/',
     templateUrl: 'views/landing.html'
   })
 
