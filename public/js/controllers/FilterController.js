@@ -2,7 +2,6 @@ angular.module('App.filterCtrl', [])
 
 .controller('FilterController', ['$scope', '$state', function($scope, $state) {
   // sidebar menu button
-  $scope.sidebarBtn = "☰ Menu";
   $scope.filters = ['Random!',
                     'Little Gifts',
                     'Fun Activities',
@@ -12,8 +11,9 @@ angular.module('App.filterCtrl', [])
   $scope.activeFilter = 'Random!';
   $scope.setActive = function(filter) {
     $scope.activeFilter = filter;
+    $scope.header = "☰ " + $scope.activeFilter;
   };
-
+  $scope.header = "☰ " + $scope.activeFilter;
   // when ☰ Menu is clicked, showSidebar gets fired; click again and hideSidebar will fire
   // $scope.showSidebar = showSidebar();
   var toggle = true;

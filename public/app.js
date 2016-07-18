@@ -43,3 +43,8 @@ angular.module('App',
   })
 
 }])
+
+.run(['$location', '$state', function ($location, $state) {
+  $location.url('/');
+  $state.go('landing');
+}]);
