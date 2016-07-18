@@ -10,4 +10,9 @@ angular.module('App.signUpCtrl', [])
     SignUp.submitSignUp(email);
     $state.go('home');
   };
+
+  $scope.cancelSignUp = function() {
+    $state.go('home');
+  }
+
 }]);
