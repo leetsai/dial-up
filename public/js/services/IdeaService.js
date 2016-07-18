@@ -5,6 +5,9 @@ angular.module('App.ideaService', [])
   var currentIdea = {
     data: null
   };
+  var location = {
+    data: null
+  }
   var getYelp = function(suggestion) { // include location, resultCount
     return $http({
       method: 'POST',
@@ -32,6 +35,7 @@ angular.module('App.ideaService', [])
   };
 
   return {
+    location: location,
     currentIdea: currentIdea,
     // getIdea: getIdea,
     getYelp: getYelp,

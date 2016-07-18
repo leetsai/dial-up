@@ -2,8 +2,8 @@ angular.module('App.ideaCtrl', [])
 
 .controller('IdeaController', ['$scope', 'Ideas', 'SuggestionFactory', function($scope, Ideas, SuggestionFactory) {
   // Default data on page load - changes occur in Buttons directive
-  $scope.idea = "In Need of Some Spontaneity?";
-  $scope.button = "Get Some!";
+  $scope.idea = "Feeling Spontaneous?";
+  $scope.button = "Go!";
   $scope.filter = 'Random!';
   // These dictate whether more information can be shown
   $scope.class = 'noInfo';

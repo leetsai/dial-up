@@ -39,7 +39,7 @@ app.get('/', function(req, res) {
 // user sign-up: POST request
 app.post('/submitForm', function(req, res, next) {
   var userInformation = JSON.parse(Object.keys(req.body)[0]);
-  var data = userInformation.username + ' ' + userInformation.email;
+  var data = userInformation.username + ' ' + userInformation.email + '\n';
   fs.appendFile('server/account.txt', data, 'utf8', function(err) {
     if (err) {
       console.log(err + ': cannot save to file.');

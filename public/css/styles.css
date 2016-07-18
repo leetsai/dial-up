@@ -130,6 +130,7 @@ html, body {
   margin-right: 25px;
 }
 .listWrapper {
+  font-size: 18px;
   text-align: left;
   margin: 0 auto;
   width: 90%;
@@ -151,7 +152,7 @@ a {
 }
 
 .list-item {
-  padding: 10px;
+  padding: 15px;
   overflow: hidden;
   /*border-top: 1px solid #868686;*/
   border-radius: 5px;
@@ -277,14 +278,14 @@ a.target {
   border: none;
   background: #109bce;
   border-radius: 5px;
-  box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #07526e, 0px 10px 5px #656565;
+  box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #07526e, 0px 5px 5px #656565;
 }
 .get-idea-btn:hover {
   background: #2aa2ce;
 }
 .get-idea-btn:active {
   top:3px;
-  box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #07526e, 0px 5px 3px #656565;
+  box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #07526e, 0px 2.5px 3px #656565;
 }
 .button {
   text-align: center;
