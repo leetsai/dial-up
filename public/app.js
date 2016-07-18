@@ -17,7 +17,7 @@ angular.module('App',
 ])
 
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('/getidea');
+  $urlRouterProvider.otherwise('/');
   $stateProvider
   .state('home', {
     url: '/getidea',
@@ -28,6 +28,10 @@ angular.module('App',
     url: '/{searchTerm}',
     templateUrl: 'views/list.html',
     controller: 'ListController'
+  })
+  .state('signup', {
+    url: '/',
+    templateUrl: 'views/landing.html'
   })
 
 }])

@@ -39,7 +39,7 @@ app.get('/', function(req, res) {
 // user sign-up: POST request
 app.post('/submitForm', function(req, res, next) {
   var userInformation = JSON.parse(Object.keys(req.body)[0]);
-  var data = userInformation.username + ' ' + userInformation.email;
+  var data = userInformation.username + ' ' + userInformation.email + '\n';
   fs.appendFile('server/account.txt', data, 'utf8', function(err) {
     if (err) {
       console.log(err + ': cannot save to file.');
@@ -93,8 +93,9 @@ app.post('/api/yelpDetails', function(req, res, next) {
   })
   req.on('end', function() {
     var suggestion = JSON.parse(body).suggestion;
+    var location = JSON.parse(body).location;
     console.log(suggestion);
-    yelp.yelpSearch(suggestion, 94109, 5, function(data) {
+    yelp.yelpSearch(suggestion, location, 5, function(data) {
       console.log('Yelp Call Executing: ', data);
       res.send(data);
     });
