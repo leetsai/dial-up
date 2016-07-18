@@ -126,7 +126,15 @@ float: left;
   color: white;
   text-align: right;
 }
-.footer span {
+.footer-message {
+  float: left;
+  margin-left: 25px;
+  margin-right: .4em !important;
+}
+.footer-location {
+  float: left;
+}
+.footer-created {
   margin-right: 25px;
 }
 .listWrapper {
@@ -259,7 +267,7 @@ a.target {
 }
 /* Button List */
 .get-idea-btn {
-  width:250px;
+  width:225px;
   height:125px;
   display:inline-block;
   font-family:Arial, "Helvetica", sans-serif;
