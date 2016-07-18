@@ -38,14 +38,24 @@ app.get('/', function(req, res) {
 
 // user sign-up: POST request
 app.post('/submitForm', function(req, res, next) {
-  var userInformation = JSON.parse(Object.keys(req.body)[0]);
-  var data = userInformation.username + ' ' + userInformation.email + '\n';
-  fs.appendFile('server/account.txt', data, 'utf8', function(err) {
-    if (err) {
-      console.log(err + ': cannot save to file.');
-    }
-  });
-});
+  var body = '';
+  req.on('data', function(chunk) {
+    body += chunk;
+  })
+  req.on('end', function() {
+    var email = JSON.parse(body).email
+    console.log(email);
+  // };
+  // var userInformation = JSON.parse(Object.keys(req.body)[0]);
+  // var data = userInformation.username + ' ' + userInformation.email;
+    fs.appendFile('server/account.txt', email + '\n', 'utf8', function(err, data) {
+      if (err) {
+        console.log(err + ': cannot save to file.');
+      }
+      res.send(data);
+    })
+  })
+})
 
 // getIdea - responds to user clicking "GO button" from UI
 // app.post('/api/getIdea', function(req, res, next) {

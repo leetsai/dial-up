@@ -1,6 +1,6 @@
 angular.module('App.filterCtrl', [])
 
-.controller('FilterController', ['$scope', function($scope) {
+.controller('FilterController', ['$scope', '$state', function($scope, $state) {
   // sidebar menu button
   $scope.sidebarBtn = "☰ Menu";
   $scope.filters = ['Random!',
@@ -28,5 +28,10 @@ angular.module('App.filterCtrl', [])
       $('.list').slideUp(200);
     }
   };
+
+  $scope.loadSignup = function() {
+    $state.go('signup');
+  }
+
   // $scope.hideSidebar = hideSidebar();
 }]);
