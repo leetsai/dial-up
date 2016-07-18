@@ -83,6 +83,7 @@ box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.5);
 }
 
 .wrapper {
+  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.3);
   overflow: hidden;
   text-align: center;
   margin-top: 40px;
@@ -425,6 +426,7 @@ input:hover {
 /*end of sign in page ----------------------------------------*/
 
 .landing-wrapper {
+  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.3);
   text-align: center;
   top: 10%;
   color: white;
@@ -467,6 +469,9 @@ input:hover {
 .location-submit:hover {
   cursor: pointer;
   background-color: rgba(238, 131, 89, 0.87);
+}
+.location-submit:active {
+  background-color: rgba(222, 120, 80, 0.87);
 }
 .location-zip {
   width: 150px;
