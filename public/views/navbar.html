@@ -11,6 +11,10 @@
       </ul>
     </div>
   </div>
+  <div class="navbar-count">
+    <input id="result-count" type="range" min="0" max="25" step="5" ng-model="resultCount" value="5">
+    <span class="result-count-message">Result count: {{ resultCount }}</span>
+  </div>
   <div class="navbar-item" ng-click="loadSignup()">
     <button class="signup-btn">Sign Up</button>
   </div>

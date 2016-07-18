@@ -104,8 +104,9 @@ app.post('/api/yelpDetails', function(req, res, next) {
   req.on('end', function() {
     var suggestion = JSON.parse(body).suggestion;
     var location = JSON.parse(body).location;
+    var count = JSON.parse(body).resultCount;
     console.log(suggestion);
-    yelp.yelpSearch(suggestion, location, 5, function(data) {
+    yelp.yelpSearch(suggestion, location, count, function(data) {
       console.log('Yelp Call Executing: ', data);
       res.send(data);
     });
