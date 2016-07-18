@@ -1,8 +1,8 @@
 angular.module('App.signUpCtrl', [])
 //factory: $http post to sign up
-.factory('SignUp', function($http) {
+.factory('SignUp', ['$http', function($http) {
   var submitSignUp = function(username, email) {
-    console.log('coming in here!!', username, email)
+    console.log('coming in here!!', username, email);
     return $http({
       method: 'POST',
       url: '/submitForm',
@@ -20,13 +20,13 @@ angular.module('App.signUpCtrl', [])
         console.log(err);
       }
     });
-  }
+  };
 
   return {
     submitSignUp: submitSignUp
   };
-})
-.controller('signUpController', function($scope, SignUp) {
+}])
+.controller('signUpController', ['$scope', 'SignUp', function($scope, SignUp) {
   $scope.username = '';
   $scope.email = '';
 
@@ -34,5 +34,5 @@ angular.module('App.signUpCtrl', [])
   $scope.getCredentials = function(username, email) {
     console.log('this is coming in here', username, email);
     SignUp.submitSignUp(username, email);
-  }
-});
+  };
+}]);

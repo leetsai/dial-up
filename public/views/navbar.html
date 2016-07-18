@@ -1,14 +1,17 @@
-<ul class="navbar">
-  <!-- <div>
-    <select id="filterMenu" name="select">
-      <option value="Random!" selected>Random!</option>
-      <option value="Little Gifts">Little Gifts</option>
-      <option value="Fun Activities">Fun Activities</option>
-      <option value="Quick Trips">Quick Trips</option>
-      <option value="What to Eat">What to Eat</option>
-    </select>
-  </div> -->
+<div class="navbar">
+  <div id="filter-menu" class="sidebar" ng-controller="FilterController">
+    <div class="menu-link" ng-click="showSidebar()">
+      <a class="menu" href="">☰ Menu</a>
+    </div>
+    <div class="list">
+      <ul class="sidebar-list">
+        <a href="" ng-repeat="filter in filters" ng-click="setActive(filter)"
+           ng-class="{target: filter === activeFilter}"
+           class="sidebar-list-item">{{ filter }}</a>
+      </ul>
+    </div>
+  </div>
   <div class="navbar-item">
     <button class="signup-btn">Sign Up</button>
   </div>
-</ul>
+</div>

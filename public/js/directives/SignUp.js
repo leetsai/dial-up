@@ -4,5 +4,5 @@ angular.module('App.eventSignUp', [])
   return {
     restrict: 'E',
     templateUrl: 'views/signUp.html',
-  }
-}])
+  };
+}]);

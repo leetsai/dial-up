@@ -1,6 +1,6 @@
-angular.module('App.sidebarCtrl', [])
+angular.module('App.filterCtrl', [])
 
-.controller('SidebarController', ['$scope', function($scope) {
+.controller('FilterController', ['$scope', function($scope) {
   // sidebar menu button
   $scope.sidebarBtn = "☰ Menu";
   $scope.filters = ['Random!',
@@ -22,5 +22,17 @@ angular.module('App.sidebarCtrl', [])
   }
   // when ☰ Menu is clicked, showSidebar gets fired; click again and hideSidebar will fire
   // $scope.showSidebar = showSidebar();
+  var toggle = true;
+
+  $scope.showSidebar = function() {
+    if (toggle) {
+      toggle = false;
+      $('.list').slideDown(200);
+
+    } else {
+      toggle = true;
+      $('.list').slideUp(200);
+    }
+  };
   // $scope.hideSidebar = hideSidebar();
 }]);

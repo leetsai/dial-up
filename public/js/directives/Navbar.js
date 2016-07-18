@@ -4,5 +4,5 @@ angular.module('App.navbar', [])
   return {
     restrict: 'E',
     templateUrl: 'views/navbar.html'
-  }
-}])
+  };
+}]);

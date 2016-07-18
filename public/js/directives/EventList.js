@@ -4,5 +4,5 @@ angular.module('App.eventList', [])
   return {
     restrict: 'E',
     templateUrl: 'views/list.html',
-  }
-}])
+  };
+}]);
