@@ -118,7 +118,6 @@ box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.5);
   display: flex;
   border-right: 1px solid #636363;
   padding-right: 30px;
-  min-width: 260px;
 }
 .navbar-location {
   display: flex;
@@ -148,6 +147,8 @@ box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.5);
   margin: 0px 10px 0px 0px;
 }
 .result-count-message {
+  text-align: center;
+  width: 115px;
   color: white;
 }
 /*.navbar > div:first-child {
