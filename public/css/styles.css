@@ -487,7 +487,7 @@ input:hover {
   font-size: 50px;
 }
 .location-msg {
-  font-size: 18px;
+  font-size: 24px;
 }
 .location-form > input {
   border: none;
@@ -496,7 +496,6 @@ input:hover {
   border-top-width: 2px;
   margin-top: 20px;
   padding: 10px;
-  color: #3e4b5a;
 }
 .location-submit {
   margin: auto;
